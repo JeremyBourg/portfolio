@@ -1,6 +1,4 @@
 <script>
-import { onMount } from 'svelte';
-
 function toggleNavMenu() {
     document.documentElement.classList.toggle('nav-is-active');
 }
