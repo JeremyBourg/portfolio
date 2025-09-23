@@ -1,0 +1,14 @@
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    gap: 24px;
+}
+
+.nav li{
+    font-size: typo(18px, 20px);
+    font-weight: 500;
+}

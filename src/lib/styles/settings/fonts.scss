@@ -1,0 +1,16 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Albert Sans', serif; // titres
+    --font-secondary: 'Fira Code', sans-serif; // corps de texte
+
+    --font-size-content: #{typo(16px, 18px)};
+
+    /// Grosseur des textes
+    --font-size-h1: #{typo(60px, 96px)};
+    --font-size-h2: #{typo(32px, 48px)};
+    --font-size-h3: #{typo(24px, 36px)};
+    --font-size-h4: #{typo(20px, 24px)};
+}
