@@ -7,25 +7,24 @@ import parallax4 from '$lib/assets/parallax2.png'
 import parallax5 from '$lib/assets/parallax1.png'
 import name from '$lib/assets/parallax-name.png'
 
-if (typeof window !== 'undefined') {
-    window.addEventListener("scroll", function(event){
+let top = $state(0);
 
-        const top = this.pageYOffset;
-
-        const layers = document.getElementsByClassName("parallax");
-        for (var i = 0; i < layers.length; i++) {
-            const layer = layers[i];
-            const speed = layer.getAttribute('data-speed');
-            const yPos = -(top * speed / 100);
-            layer.setAttribute('style', `transform: translateY(${yPos}px)`);
-            if (i == layers.length - 2) {
-                const fill = document.getElementById('fill')
-                fill.setAttribute('style', `height: ${yPos * -1}px`)
-            }
+function scroll(event) {
+    const layers = document.getElementsByClassName("parallax");
+    for (var i = 0; i < layers.length; i++) {
+        const layer = layers[i];
+        const speed = layer.getAttribute('data-speed');
+        const yPos = -(top * speed / 100);
+        layer.setAttribute('style', `transform: translateY(${yPos}px)`);
+        if (i == layers.length - 2) {
+            const fill = document.getElementById('fill')
+            fill.setAttribute('style', `height: ${yPos * -1}px`)
         }
-    });
-}
+    }
+};
 </script>
+
+<svelte:window on:scroll={scroll} bind:scrollY={top} />
 
 <style>
 #parallax {
