@@ -8,7 +8,7 @@ Le projet à été réalisé avec [SvelteKit](https://svelte.dev/) et [Sass](htt
 
 ## Installation
 
-Assurez-vous d'avoir Node.js et npm installé.
+Assurez-vous d'avoir Node.js et npm installés.
 
 Installer les dépendances :
 
@@ -31,7 +31,7 @@ npm run build
 ## Mentions légales
 
 L'image d'arrière-plan utilisée dans la page d'accueil provient de [Vecteezy](https://www.vecteezy.com/vector-art/9302817-vector-red-horizontal-landscape-with-fog-forest-spruce-fir-and-morning-sunlight-autumn-season-illustration-of-panoramic-view-silhouette-mist-and-orange-mountains-fall-trees-fire-in-the-woods).
-Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes spécifié par la license gratuite de [Vecteezy](https://www.vecteezy.com/licensing-agreement).
+Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes spécifiés par la [license gratuite de Vecteezy](https://www.vecteezy.com/licensing-agreement).
 
 ## License
 
