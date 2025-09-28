@@ -25,8 +25,9 @@ h2 {
 
 h3 {
   font-size: var(--font-size-h3);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 45px;
+  margin: 0;
 }
 
 h4 {
@@ -39,4 +40,11 @@ p {
   font-size: var(--font-size-p);
   letter-spacing: -5%;
   line-height: 1.2;
+}
+.extra {
+  font-size: var(--font-size-extra);
+  letter-spacing: -5%;
+  line-height: 1.2;
+  font-weight: 200;
+  color: var(--color-tertiary);
 }
