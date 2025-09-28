@@ -23,7 +23,7 @@ a::before {
 	content: '';
 	position: absolute;
 	z-index: -1;
-	inset: 0;
+	inset: -10px;
 	background-color: var(--color-secondary);
 
 	transform: translateX(-100%);
