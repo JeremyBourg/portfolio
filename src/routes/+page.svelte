@@ -16,7 +16,7 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 
-    & div {
+    & * {
         grid-column: 1 / -1;
     }
 }
@@ -43,8 +43,15 @@ span {
             <img src="{photo}" alt="">
         </div>
 
+        <h1>Ce qui me définit</h1>
+
         <div>
-            <h1>Ce qui me définit</h1>
+            <h2>Compétences et languages</h2>
+            <p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
+            <br>
+            <p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
+            <br>
+            <p>J'apprend présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
         </div>
     </div>
 
@@ -60,6 +67,20 @@ span {
 
         <div class="small">
             <h2>Qualités</h2>
+            <div id="qualities">
+                <div>
+                    <h3>Résolution de problèmes</h3>
+                    <p>Mon passe-temps #1</p>
+                </div>
+                <div>
+                    <h3>Curiosité</h3>
+                    <p>Une grande soif d'apprendre</p>
+                </div>
+                <div>
+                    <h3>Résolution de problèmes</h3>
+                    <p>Mon passe-temps #1</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
