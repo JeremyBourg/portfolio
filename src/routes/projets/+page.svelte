@@ -78,7 +78,7 @@ h1 {
 						<p>{summary}</p>
 					</div>
 					<div class="button-container">
-						<CTA label={"En savoir plus"} href={"/projets/bsc"}/>
+						<CTA label={"En savoir plus"} href={"/projets/" + slug}/>
 					</div>
 				</div>
 			{:else}
@@ -92,7 +92,7 @@ h1 {
 					</div>
 					<img src="{thumbnail}" alt="">
 					<div class="button-container">
-						<CTA label={"En savoir plus"} href={"/projets/bsc"}/>
+						<CTA label={"En savoir plus"} href={"/projets/" + slug}/>
 					</div>
 				</div>
 			{/if}
