@@ -64,38 +64,27 @@ h1 {
 
 </style>
 <div class="wrapper">
-	<h1>Grille de projets</h1>
-	<div id="projects-grid">
-		{#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
-			{#if index % 2 === 0}
-				<div class="project-card card-left">
-					<img src="{thumbnail}" alt="">
-					<div class="project-info">
-						<h3>{subject}</h3>
-						<h2>{title}</h2>
-						<div class="separator"></div>
-						<h4>{skills}</h4>
-						<p>{summary}</p>
-					</div>
-					<div class="button-container">
-						<CTA label={"En savoir plus"} href={"/projets/" + slug}/>
-					</div>
-				</div>
-			{:else}
-				<div class="project-card card-right">
-					<div class="project-info">
-						<h3>{subject}</h3>
-						<h2>{title}</h2>
-						<div class="separator"></div>
-						<h4>{skills}</h4>
-						<p>{summary}</p>
-					</div>
-					<img src="{thumbnail}" alt="">
-					<div class="button-container">
-						<CTA label={"En savoir plus"} href={"/projets/" + slug}/>
-					</div>
-				</div>
-			{/if}
-		{/each}
-	</div>
+    <h1>Grille de projets</h1>
+    <div id="projects-grid">
+        {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
+            <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
+                {#if index % 2 === 0}
+                    <img src="{thumbnail}" alt="">
+                {/if}
+                <div class="project-info">
+                    <h3>{subject}</h3>
+                    <h2>{title}</h2>
+                    <div class="separator"></div>
+                    <h4>{skills}</h4>
+                    <p>{summary}</p>
+                </div>
+                {#if index % 2 !== 0}
+                    <img src="{thumbnail}" alt="">
+                {/if}
+                <div class="button-container">
+                    <CTA label={"En savoir plus"} href={"/projets/" + slug}/>
+                </div>
+            </div>
+        {/each}
+    </div>
 </div>
