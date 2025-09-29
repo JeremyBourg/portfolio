@@ -7,7 +7,52 @@ export const posts = [
 		subject: 'Design et intégration web',
 		skills: 'HTML, SCSS, JavaScript et Figma',
 		type: 'Projet scolaire',
-		description: '<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>',
+		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
+		summary: "Refonte du site d’une municipalité. Conçu de A à Z du design jusqu’à l’intégration.",
 		thumbnail: bscImage,
+		sections: [
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+		]
+	},
+	{
+		slug: 'bataille-contre-le-smog',
+		title: 'Bataille contre le smog',
+		subject: 'Design et intégration web',
+		skills: 'HTML, SCSS, JavaScript et Figma',
+		type: 'Projet scolaire',
+		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
+		summary: "Refonte du site d’une municipalité. Conçu de A à Z du design jusqu’à l’intégration.",
+		thumbnail: bscImage,
+		sections: [
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+			{
+				subtitle: 'Intégration',
+				content: "<p>L’intégration se faisait avec l’aide de composantes JavaScript pour les caroussels, l’en-tête, et les animation de scrollytelling.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				image: bscImage,
+			},
+		]
 	},
 ]

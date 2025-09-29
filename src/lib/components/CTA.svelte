@@ -8,6 +8,7 @@ a {
 	padding: 16px 32px;
 	border: 4px solid var(--color-secondary);
 	overflow: hidden;
+	display: inline-block;
 }
 
 p {

@@ -11,6 +11,7 @@ nav {
     position: fixed;
     width: 100%;
     height: 100%;
+	z-index: 20;
 
     top: -100%;
     transition: top 0.6s ease-out;
