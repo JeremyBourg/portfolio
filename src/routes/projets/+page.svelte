@@ -1,3 +1,11 @@
-<h1>Grille de projets</h1>
+<script>
 
-<a href="/projets/bsc">baie-sainte-catherine</a>
+let {data} = $props();
+
+</script>
+<div class="wrapper">
+	<h1>Grille de projets</h1>
+	{#each data.summaries as { slug, title }}
+		<a href="/projets/{slug}">{title}</a>
+	{/each}
+</div>
