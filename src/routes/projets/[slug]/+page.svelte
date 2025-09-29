@@ -9,7 +9,7 @@ import './style.scss';
 		<div>
 			<h2>{data.post.subject}</h2>
 			<div id="separator"></div>
-			<div><h4>{data.post.skills}</h4></div>
+			<h4>{data.post.skills}</h4>
 			<h3>{data.post.type}</h3>
 		</div>
 		<img src="{data.post.thumbnail}" alt="">

@@ -28,11 +28,18 @@ h1 {
 
 .project-info {
 	z-index: 2;
-	& > :not(:last-child) {
-		margin-bottom: 8px;
+
+	& > * + * {
+		margin-top: 8px;
 	}
 }
 
+.card-left img {
+    transform: translateX(7%);
+}
+.card-right img {
+    transform: translateX(-7%);
+}
 
 .card-left .project-info {
 	margin-top: 5%;
@@ -43,19 +50,19 @@ h1 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	transform: translateY(50%) translateX(-20%);
+	transform: translateY(50%);
 }
 
 .card-right .project-info {
 	margin-top: 5%;
 	padding-left: 10%;
-	margin-right: -20%;
+	margin-right: -10%;
 }
 .card-right .button-container {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	transform: translateY(50%) translateX(20%);
+	transform: translateY(50%);
 }
 .separator {
 	height: 2px;
@@ -86,5 +93,9 @@ h1 {
                 </div>
             </div>
         {/each}
+    </div>
+
+    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;">
+        <CTA label={"Intéressé?"} href={"/contact"} />
     </div>
 </div>
