@@ -71,7 +71,7 @@ h1 {
 
 </style>
 <div class="wrapper">
-    <h1>Grille de projets</h1>
+    <h1>Mes projets</h1>
     <div id="projects-grid">
         {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
             <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
