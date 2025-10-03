@@ -119,10 +119,10 @@ li::before {
 
     <div class="second">
         <div>
-            <h2>Développeur web</h2>
+            <h2>Programmeur junior</h2>
             <p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
             <br>
-            <p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en développement web.</p>
+            <p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
             <br>
             <p>Je vise à apprendre des technologies front-end et back-end.</p>
         </div>
