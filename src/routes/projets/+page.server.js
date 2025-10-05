@@ -8,7 +8,8 @@ export function load() {
 			thumbnail: post.thumbnail,
 			skills: post.skills,
 			subject: post.subject,
-			summary: post.summary
+			summary: post.summary,
+			sections: post.sections
 		}))
 	}
 }

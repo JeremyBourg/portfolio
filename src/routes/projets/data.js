@@ -22,6 +22,20 @@ export const posts = [
 		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
 		summary: "Refonte du site d’une municipalité. Conçu de A à Z du design jusqu’à l’intégration.",
 		thumbnail: bscImage,
+		sections: [
+			{
+				type: 'modal',
+				title: "Intégration",
+				image: bscImage,
+				content: "<p>L’intégration se faisait avec l’aide de composantes <span>JavaScript</span> pour les <span>caroussels</span>, l’en-tête, et les animation de <span>scrollytelling</span>.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+			},
+			{
+				type: 'modal',
+				title: "Design",
+				image: bscImage,
+				content: "<p>Bien que le design ne soit pas ma force principale, j’ai su quand même respecter les <span>principes</span> et appliquer une direction artistique pour créer un <span>site cohérent</span> qui marche sur mobile et sur desktop.</p>",
+			},
+		]
 	},
 	{
 		slug: 'bataille-contre-le-smog',

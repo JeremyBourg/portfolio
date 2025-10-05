@@ -1,6 +1,9 @@
 <script>
-let { data } = $props();
+import click from "$lib/assets/modal-icon.svg";
+import Modal from '$lib/components/Modal.svelte';
 import './style.scss';
+
+let { data } = $props();
 </script>
 
 <div class="wrapper">
@@ -18,4 +21,23 @@ import './style.scss';
 		<h2>Description</h2>
 		{@html data.post.description}
 	</section>
+
+	{#each data.post.sections as section, index }
+		{#if section.type === 'modal'}
+			<section>
+				<h2>{section.title}</h2>
+				<div class="modal">
+					<Modal>
+						<img src="{section.image}" alt="" style="display: block;">
+					</Modal>
+					<div>
+						{@html section.content}
+					</div>
+				</div>
+			</section>
+		{/if}
+		{#if section.type === 'carousel'}
+			<!-- ... content -->
+		{/if}
+	{/each}
 </div>
