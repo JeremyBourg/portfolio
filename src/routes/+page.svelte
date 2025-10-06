@@ -66,8 +66,8 @@
                     <p>Une grande soif d'apprendre</p>
                 </div>
                 <div>
-                    <h3><span>Résolution de problèmes</span></h3>
-                    <p>Mon passe-temps #1</p>
+                    <h3><span>Minutie</span></h3>
+                    <p>Souci du détail et des bugs</p>
                 </div>
             </div>
         </div>
