@@ -21,6 +21,18 @@ let top = $state();
 
 <svelte:window bind:scrollY={top} />
 
+<div id="parallax">
+    <div id="fill" style="height: {top}px"></div>
+	{#each layers as image, index}
+		<img
+			src="{image}"
+			alt="parallax layer {index}"
+			style="transform: translate(0, {(-top * index) / (layers.length - 1)}px); z-index: {-10 + index}"
+		>
+	{/each}
+    <img class="parallax-name" src="{name}" alt="">
+</div>
+
 <style>
 #parallax {
     height: 100vh;
@@ -43,15 +55,3 @@ img {
     top: 16vh;
 }
 </style>
-
-<div id="parallax">
-    <div id="fill" style="height: {top}px"></div>
-	{#each layers as image, index}
-		<img
-			src="{image}"
-			alt="parallax layer {index}"
-			style="transform: translate(0, {(-top * index) / (layers.length - 1)}px); z-index: {-10 + index}"
-		>
-	{/each}
-    <img class="parallax-name" src="{name}" alt="">
-</div>

@@ -3,6 +3,29 @@ import github from '$lib/assets/github-mark-white.svg';
 import linkedin from '$lib/assets/InBug-White.png';
 </script>
 
+<footer>
+	<div class="wrapper">
+		<div id="logos">
+			<a href="https://github.com/JeremyBourg" target="_blank">
+				<img
+					src="{github}"
+					alt="github logo"
+					height="72"
+					width="72"
+				/>
+			</a>
+			<a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-bourg-498a03385/" target="_blank">
+				<img
+					src="{linkedin}"
+					alt="linkedin logo"
+					height="72"
+				/>
+			</a>
+		</div>
+		<p class="extra">2025 © Jérémy Bourg. Ce portfolio est un logiciel libre. L’image d’arrière-plan provient de <a href="https://www.vecteezy.com/free-vector/landscape">Vecteezy</a>.</p>
+	</div>
+</footer>
+
 <style>
 footer {
 	margin-top: 100px;
@@ -33,26 +56,3 @@ a {
 	}
 }
 </style>
-
-<footer>
-	<div class="wrapper">
-		<div id="logos">
-			<a href="https://github.com/JeremyBourg" target="_blank">
-				<img
-					src="{github}"
-					alt="github logo"
-					height="72"
-					width="72"
-				/>
-			</a>
-			<a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-bourg-498a03385/" target="_blank">
-				<img
-					src="{linkedin}"
-					alt="linkedin logo"
-					height="72"
-				/>
-			</a>
-		</div>
-		<p class="extra">2025 © Jérémy Bourg. Ce portfolio est un logiciel libre. L’image d’arrière-plan provient de <a href="https://www.vecteezy.com/free-vector/landscape">Vecteezy</a>.</p>
-	</div>
-</footer>

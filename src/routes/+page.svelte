@@ -5,79 +5,6 @@
 	import CTA from '$lib/components/CTA.svelte';
 </script>
 
-<style>
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.first, .second {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 100px;
-
-    & * {
-        grid-column: 1 / -1;
-    }
-}
-
-h2:first-child {
-	margin-bottom: 24px;
-}
-
-span {
-    color: var(--color-secondary);
-}
-
-blockquote {
-	font-family: var(--font-primary);
-	font-size: var(--font-size-quote);
-	margin: 50px 100px;
-	font-weight: 200;
-	letter-spacing: -5%;
-}
-
-#qualities {
-	display: flex;
-	flex-direction: column;
-	gap: 64px;
-}
-#software {
-	margin: 100px 0;
-	grid-column: 2 / -1;
-	position: relative;
-}
-
-#software #gentoo {
-	position: absolute;
-	z-index: -1;
-	right: 67.5%;
-	bottom: -12.5%;
-	width: 100%;
-}
-
-.first .small {
-    grid-column: 1 / span 5;
-}
-
-.second .small {
-    grid-column: 2 / -1;
-}
-
-li {
-	font-size: var(--font-size-p);
-	letter-spacing: -5%;
-}
-
-li::before {
-	content: "\2013";
-	padding-inline-end: 1%;
-}
-
-</style>
-
 <Parallax />
 
 <div class="wrapper">
@@ -171,3 +98,75 @@ li::before {
 <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 100px;">
 	<CTA label={"Voir les projets"} href={"/projets"}/>
 </div>
+
+<style>
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.first, .second {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 100px;
+
+    & * {
+        grid-column: 1 / -1;
+    }
+}
+
+h2:first-child {
+	margin-bottom: 24px;
+}
+
+span {
+    color: var(--color-secondary);
+}
+
+blockquote {
+	font-family: var(--font-primary);
+	font-size: var(--font-size-quote);
+	margin: 50px 100px;
+	font-weight: 200;
+	letter-spacing: -5%;
+}
+
+#qualities {
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+}
+#software {
+	margin: 100px 0;
+	grid-column: 2 / -1;
+	position: relative;
+}
+
+#software #gentoo {
+	position: absolute;
+	z-index: -1;
+	right: 67.5%;
+	bottom: -12.5%;
+	width: 100%;
+}
+
+.first .small {
+    grid-column: 1 / span 5;
+}
+
+.second .small {
+    grid-column: 2 / -1;
+}
+
+li {
+	font-size: var(--font-size-p);
+	letter-spacing: -5%;
+}
+
+li::before {
+	content: "\2013";
+	padding-inline-end: 1%;
+}
+
+</style>

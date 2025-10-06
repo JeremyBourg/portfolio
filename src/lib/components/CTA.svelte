@@ -2,6 +2,10 @@
 let { label, href } = $props();
 </script>
 
+<a href="{href}">
+	<p>{label}</p>
+</a>
+
 <style>
 a {
 	position: relative;
@@ -41,7 +45,3 @@ a:hover {
 }
 
 </style>
-
-<a href="{href}">
-	<p>{label}</p>
-</a>

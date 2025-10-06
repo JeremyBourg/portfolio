@@ -4,6 +4,21 @@ function toggleNavMenu() {
 }
 </script>
 
+<header>
+    <button aria-label="Bouton menu" id="nav-toggle" on:click={toggleNavMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav>
+        <div>
+            <a href="/" on:click={toggleNavMenu}>Accueil</a>
+            <a href="/projets" on:click={toggleNavMenu}>Mes projets</a>
+            <a href="/contact" on:click={toggleNavMenu}>Contact</a>
+        </div>
+    </nav>
+</header>
+
 <style>
 
 nav {
@@ -114,18 +129,3 @@ nav {
     }
 }
 </style>
-
-<header>
-    <button aria-label="Bouton menu" id="nav-toggle" on:click={toggleNavMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <div>
-            <a href="/" on:click={toggleNavMenu}>Accueil</a>
-            <a href="/projets" on:click={toggleNavMenu}>Mes projets</a>
-            <a href="/contact" on:click={toggleNavMenu}>Contact</a>
-        </div>
-    </nav>
-</header>

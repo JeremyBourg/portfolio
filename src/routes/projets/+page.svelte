@@ -5,6 +5,36 @@ let {data} = $props();
 
 </script>
 
+<div class="wrapper">
+    <h1>Mes projets</h1>
+    <div id="projects-grid">
+        {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
+            <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
+                {#if index % 2 === 0}
+                    <img src="{thumbnail}" alt="">
+                {/if}
+                <div class="project-info">
+                    <h3>{subject}</h3>
+                    <h2>{title}</h2>
+                    <div class="separator"></div>
+                    <h4>{skills}</h4>
+                    <p>{summary}</p>
+                </div>
+                {#if index % 2 !== 0}
+                    <img src="{thumbnail}" alt="">
+                {/if}
+                <div class="button-container">
+                    <CTA label={"En savoir plus"} href={"/projets/" + slug}/>
+                </div>
+            </div>
+        {/each}
+    </div>
+
+    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;">
+        <CTA label={"Intéressé?"} href={"/contact"} />
+    </div>
+</div>
+
 <style>
 h1 {
 	padding: 100px 0;
@@ -70,32 +100,3 @@ h1 {
 }
 
 </style>
-<div class="wrapper">
-    <h1>Mes projets</h1>
-    <div id="projects-grid">
-        {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
-            <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
-                {#if index % 2 === 0}
-                    <img src="{thumbnail}" alt="">
-                {/if}
-                <div class="project-info">
-                    <h3>{subject}</h3>
-                    <h2>{title}</h2>
-                    <div class="separator"></div>
-                    <h4>{skills}</h4>
-                    <p>{summary}</p>
-                </div>
-                {#if index % 2 !== 0}
-                    <img src="{thumbnail}" alt="">
-                {/if}
-                <div class="button-container">
-                    <CTA label={"En savoir plus"} href={"/projets/" + slug}/>
-                </div>
-            </div>
-        {/each}
-    </div>
-
-    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;">
-        <CTA label={"Intéressé?"} href={"/contact"} />
-    </div>
-</div>

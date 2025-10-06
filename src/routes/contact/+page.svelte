@@ -1,3 +1,33 @@
+<div class="wrapper">
+    <h1>On se parle?</h1>
+    <p>Vous avez des questions ou un projet en tête? Je suis là pour transformer vos idées en réalité, sans bugs (ou presque)!</p>
+    <form action="">
+        <fieldset>
+            <input type="text" placeholder="Nom">
+            <input type="email" placeholder="Courriel">
+            <textarea id="message" placeholder="Message"></textarea>
+        </fieldset>
+        <div id="submit">
+            <input type="submit" value="Soumettre">
+        </div>
+    </form>
+
+    <div class="info">
+        <div>
+            <p>Courriel:</p>
+            <p>jer.bourg2@gmail.com</p>
+        </div>
+        <div>
+            <p>Téléphone:</p>
+            <p>(438) 518-7401</p>
+        </div>
+        <div>
+            <p>CV:</p>
+            <a href="/link/to/pdf" download>Télécharger (PDF)</a>
+        </div>
+    </div>
+</div>
+
 <style>
 .wrapper > h1 {
     padding-top: 100px;
@@ -99,33 +129,3 @@ textarea {
     }
 }
 </style>
-
-<div class="wrapper">
-    <h1>On se parle?</h1>
-    <p>Vous avez des questions ou un projet en tête? Je suis là pour transformer vos idées en réalité, sans bugs (ou presque)!</p>
-    <form action="">
-        <fieldset>
-            <input type="text" placeholder="Nom">
-            <input type="email" placeholder="Courriel">
-            <textarea id="message" placeholder="Message"></textarea>
-        </fieldset>
-        <div id="submit">
-            <input type="submit" value="Soumettre">
-        </div>
-    </form>
-
-    <div class="info">
-        <div>
-            <p>Courriel:</p>
-            <p>jer.bourg2@gmail.com</p>
-        </div>
-        <div>
-            <p>Téléphone:</p>
-            <p>(438) 518-7401</p>
-        </div>
-        <div>
-            <p>CV:</p>
-            <a href="/link/to/pdf" download>Télécharger (PDF)</a>
-        </div>
-    </div>
-</div>
