@@ -38,10 +38,3 @@ Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes sp�
 Ce portfolio est un logiciel libre.
 Vous pouvez le redistribuer et/ou le modifier sous les conditions de la [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html) telle que publiée par la Free Software Foundation.
 
-
-### Exceptions
-
-Ce site intéragit avec des API propriétaires. Pour redistribuer le site, il faut enlever les intéractions avec ces API propriétaires.
-
-- Google Fonts
-- Google Analytics

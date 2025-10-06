@@ -1,6 +1,15 @@
 //FONTS
 // ici sont chargés les fonts
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&display=swap');
+@font-face {
+  font-family: 'AlbertSans';
+  font-style: normal;
+  src: url(./fonts/AlbertSans-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  src: url(./fonts/FiraCode-VariableFont_wght.ttf) format('truetype');
+}
 
 // TOOLS
 // mixins et fonctions utilisés globalement dans le SCSS (Sass)

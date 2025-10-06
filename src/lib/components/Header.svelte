@@ -28,7 +28,7 @@ nav {
     }
 
     a {
-        font-family: 'Albert Sans';
+        font-family: var(--font-primary);
         text-decoration: none;
         font-size: var(--font-size-h1);
         font-weight: 700;
