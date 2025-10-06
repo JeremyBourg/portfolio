@@ -27,7 +27,7 @@ export const posts = [
 				type: 'modal',
 				title: "Intégration",
 				image: bscImage,
-				content: "<p>L’intégration se faisait avec l’aide de composantes <span>JavaScript</span> pour les <span>caroussels</span>, l’en-tête, et les animation de <span>scrollytelling</span>.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+				content: "<p>L’intégration se faisait avec l’aide de composantes <span>JavaScript</span> pour les <span>carrousels</span>, l’en-tête, et les animation de <span>scrollytelling</span>.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
 			},
 			{
 				type: 'modal',
