@@ -3,6 +3,7 @@
     import photo from '$lib/assets/photo-jeremy.jpg';
 	import gentoo from '$lib/assets/gentoo.jpg';
 	import CTA from '$lib/components/CTA.svelte';
+	import Term from '$lib/components/Term.svelte';
 </script>
 
 <Parallax />
@@ -76,6 +77,9 @@
             </div>
         </div>
 
+		<div class="small">
+			<Term />
+		</div>
 		<!-- TODO: Terminal component -->
     </div>
 </div>
