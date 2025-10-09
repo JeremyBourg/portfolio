@@ -80,7 +80,6 @@ import Term from '$lib/components/Term.svelte';
 		<div class="small">
 			<Term />
 		</div>
-		<!-- TODO: Terminal component -->
 	</div>
 </div>
 
