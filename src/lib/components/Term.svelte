@@ -1,8 +1,36 @@
 <script>
+import { onMount } from "svelte";
+
+let isActive = false;
+
+const handleclick = (event) => {
+	const terminal = document.getElementById("terminal");
+
+	if (terminal && terminal.contains(event.target)) {
+		console.log("clicked inside terminal");
+		isActive = true;
+	}
+	else {
+		console.log("clicked outside terminal");
+		isActive = false;
+	}
+}
+
+const keydown = (event) => {
+	if (isActive) console.log(event.key);
+}
+
+const blink = () => {
+	if (isActive) console.log("blink");
+}
+
+onMount(() => {
+	setInterval(blink, 1000);
+})
 
 </script>
 
-
+<svelte:window onkeydown={keydown} onclick={handleclick} />
 
 <div id="term-container">
 	<p class="extra">Mini-terminal</p>
