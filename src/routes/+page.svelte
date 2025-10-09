@@ -1,29 +1,29 @@
 <script>
-    import Parallax from '$lib/components/Parallax.svelte';
-    import photo from '$lib/assets/photo-jeremy.jpg';
-	import gentoo from '$lib/assets/gentoo.jpg';
-	import CTA from '$lib/components/CTA.svelte';
-	import Term from '$lib/components/Term.svelte';
+import Parallax from '$lib/components/Parallax.svelte';
+import photo from '$lib/assets/photo-jeremy.jpg';
+import gentoo from '$lib/assets/gentoo.jpg';
+import CTA from '$lib/components/CTA.svelte';
+import Term from '$lib/components/Term.svelte';
 </script>
 
 <Parallax />
 
 <div class="wrapper">
-    <div class="first">
-        <div class="small">
-            <img src="{photo}" alt="">
-        </div>
+	<div class="first">
+		<div class="small">
+			<img src="{photo}" alt="">
+		</div>
 
-        <h1>À propos</h1>
+		<h1>À propos</h1>
 
-        <div>
-            <h2>Compétences et languages</h2>
-            <p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
-            <br>
-            <p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
-            <br>
-            <p>J'apprend présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
-        </div>
+		<div>
+			<h2>Compétences et languages</h2>
+			<p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
+			<br>
+			<p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
+			<br>
+			<p>J'apprend présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
+		</div>
 
 		<blockquote><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
 
@@ -59,29 +59,29 @@
 			</div>
 		</div>
 
-        <div class="small">
-            <h2>Qualités</h2>
-            <div id="qualities">
-                <div>
-                    <h3><span>Résolution de problèmes</span></h3>
-                    <p>Mon passe-temps #1</p>
-                </div>
-                <div>
-                    <h3><span>Curiosité</span></h3>
-                    <p>Une grande soif d'apprendre</p>
-                </div>
-                <div>
-                    <h3><span>Minutie</span></h3>
-                    <p>Souci du détail et des bugs</p>
-                </div>
-            </div>
-        </div>
+		<div class="small">
+			<h2>Qualités</h2>
+			<div id="qualities">
+				<div>
+					<h3><span>Résolution de problèmes</span></h3>
+					<p>Mon passe-temps #1</p>
+				</div>
+				<div>
+					<h3><span>Curiosité</span></h3>
+					<p>Une grande soif d'apprendre</p>
+				</div>
+				<div>
+					<h3><span>Minutie</span></h3>
+					<p>Souci du détail et des bugs</p>
+				</div>
+			</div>
+		</div>
 
 		<div class="small">
 			<Term />
 		</div>
 		<!-- TODO: Terminal component -->
-    </div>
+	</div>
 </div>
 
 <div class="wrapper">
@@ -109,19 +109,19 @@
 
 <style>
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
 }
 
 .first, .second {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 100px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 100px;
 
-    & * {
-        grid-column: 1 / -1;
-    }
+	& * {
+		grid-column: 1 / -1;
+	}
 }
 
 h2:first-child {
@@ -129,7 +129,7 @@ h2:first-child {
 }
 
 span {
-    color: var(--color-secondary);
+	color: var(--color-secondary);
 }
 
 blockquote {
@@ -160,11 +160,11 @@ blockquote {
 }
 
 .first .small {
-    grid-column: 1 / span 5;
+	grid-column: 1 / span 5;
 }
 
 .second .small {
-    grid-column: 2 / -1;
+	grid-column: 2 / -1;
 }
 
 li {
