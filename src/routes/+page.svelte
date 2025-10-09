@@ -44,15 +44,19 @@
 		</div>
 	</div>
 
-    <div class="second">
-        <div>
-            <h2>Programmeur junior</h2>
-            <p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
-            <br>
-            <p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
-            <br>
-            <p>Je vise à apprendre des technologies front-end et back-end.</p>
-        </div>
+	<div class="second">
+		<div>
+			<h2>Programmeur junior</h2>
+			<p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
+			<br>
+			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
+			<br>
+			<p>Je vise à apprendre des technologies front-end et back-end.</p>
+
+			<div style="margin-top: 100px;">
+				<CTA label={"Voir les projets"} href={"/projets"}/>
+			</div>
+		</div>
 
         <div class="small">
             <h2>Qualités</h2>
