@@ -2,6 +2,8 @@
 import { onMount } from "svelte";
 
 let isActive = false;
+let cmd = $state("");
+let cursorVisible = $state(false);
 
 const handleclick = (event) => {
 	const terminal = document.getElementById("terminal");
@@ -16,16 +18,37 @@ const handleclick = (event) => {
 	}
 }
 
+const send = () => {
+	console.log("command sent: " + cmd);
+	cmd = "";
+}
+
 const keydown = (event) => {
-	if (isActive) console.log(event.key);
+	if (isActive) {
+		event.preventDefault();
+		if (event.key == "Backspace") {
+			cmd = cmd.substring(0, cmd.length - 1);
+		}
+		else if (event.key == "Enter") {
+			send();
+		}
+		else if (event.key.length == 1) {
+			cmd += event.key;
+		}
+	}
 }
 
 const blink = () => {
-	if (isActive) console.log("blink");
+	if (isActive) {
+		cursorVisible = !cursorVisible;
+	}
+	else {
+		cursorVisible = false;
+	}
 }
 
 onMount(() => {
-	setInterval(blink, 1000);
+	setInterval(blink, 500);
 })
 
 </script>
@@ -36,9 +59,7 @@ onMount(() => {
 	<p class="extra">Mini-terminal</p>
 
 	<div id="terminal">
-		<p>&gt; ls</p>
-		<p class="term-color1">index.html</p>
-		<p class="term-color2">projets</p>
+		<p>&gt; {cmd}{#if cursorVisible}|{/if}</p>
 	</div>
 	
 	<p class="extra">Essaye-le! Tape 'help'</p>
