@@ -7,6 +7,7 @@ let input = $state("");
 let cursorVisible = $state(false);
 let output = $state("");
 let pwd = "/";
+const maxLines = 13;
 
 const handleclick = (event) => {
 	const terminal = document.getElementById("terminal");
@@ -153,7 +154,15 @@ const send = () => {
 			break;
 	}
 
+	update();
 	input = "";
+}
+
+const update = () => {
+	const lines = output.split('\n');
+	if(lines.length > maxLines) {
+		output = lines.slice(lines.length - maxLines).join('\n');
+	}
 }
 
 const keydown = (event) => {
@@ -218,6 +227,7 @@ onMount(() => {
 #terminal {
 	background-color: var(--color-black);
 	border: 2px var(--color-primary) solid;
+	overflow: hidden;
 
 	padding: 8px;
 
