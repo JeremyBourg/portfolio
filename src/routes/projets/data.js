@@ -38,7 +38,7 @@ export const posts = [
 		]
 	},
 	{
-		slug: 'bataille-contre-le-smog',
+		slug: 'smog',
 		title: 'Bataille contre le smog',
 		subject: 'Conception de jeu',
 		skills: 'C#, Unity',
