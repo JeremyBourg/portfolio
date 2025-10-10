@@ -13,9 +13,9 @@ const mouseup = () => { size.target = 15, { passive: true }};
 
 </script>
 
-<svelte:window 
+<svelte:window
     on:mousemove={mousemove}
-    on:mousedown={mousedown}
+    on:mousedown={mousedown, mousemove}
     on:mouseup={mouseup}
 />
 
