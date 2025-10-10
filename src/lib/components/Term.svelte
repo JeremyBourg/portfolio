@@ -5,7 +5,7 @@ let locked = false;
 let active = false;
 let input = $state("");
 let cursorVisible = $state(false);
-let output = $state("");
+let output = $derived("");
 let pwd = "/";
 const maxLines = 13;
 
