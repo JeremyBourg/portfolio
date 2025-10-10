@@ -9,6 +9,21 @@ let output = $derived("");
 let pwd = "/";
 const maxLines = 13;
 
+const redirects = {
+	"/": {
+		"index": "/",
+		"projets": "/projets",
+		"contact": "/contact",
+	},
+	"/projets": {
+		"portfolio": "/projets/portfolio",
+		"bsc": "/projets/bsc",
+		"smog": "/projets/smog",
+		"tek-it": "/projets/tek-it",
+		"timconf": "/projets/timconf",
+	}
+}
+
 const handleclick = (event) => {
 	const terminal = document.getElementById("terminal");
 
@@ -19,6 +34,11 @@ const handleclick = (event) => {
 		active = false;
 	}
 }
+
+const trimHtmlExtension = (args) => {
+	return args.endsWith('.html') ? args.slice(0, -5) : args;
+};
+
 
 const send = () => {
 	const idx = input.indexOf(" ");
@@ -52,7 +72,7 @@ const send = () => {
 			if (args.length == 0) {
 				output += "Utilisation: cd [DOSSIER]\n";
 			}
-			else if (pwd == "/" && args == "projets" || args == "projets/") {
+			else if (pwd == "/" && args == "projets" || pwd == '/' && args == "projets/") {
 				pwd = "/projets";
 			}
 			else if (args == "..") {
@@ -95,57 +115,15 @@ const send = () => {
 				output += "Utilisation: open [FICHIER]";
 				break;
 			}
-			if (pwd == "/") {
-				switch (args) {
-					case "index":
-					case "index.html":
-						window.location.href = "/";
-						break;
 
-					case "projets":
-					case "projets.html":
-						window.location.href = "/projets";
-						break;
+			args = trimHtmlExtension(args);
+			const redirectURL = redirects[pwd]?.[args];
 
-					case "contact":
-					case "contact.html":
-						window.location.href = "/contact";
-						break;
-
-					default:
-						output += "Fichier nonexistant\n";
-				}
+			if (redirectURL) {
+				window.location.href = redirectURL;
 			}
-			else if (pwd == "/projets") {
-				switch (args) {
-					case "bsc":
-					case "bsc.html":
-						window.location.href = "/projets/bsc";
-						break;
-
-					case "smog":
-					case "smog.html":
-						window.location.href = "/projets/smog";
-						break;
-
-					case "tek-it":
-					case "tek-it.html":
-						window.location.href = "/projets/tek-it";
-						break;
-
-					case "timconf":
-					case "timconf.html":
-						window.location.href = "/projets/timconf";
-						break;
-
-					case "portfolio":
-					case "portfolio.html":
-						window.location.href = "/projets/portfolio";
-						break;
-
-					default:
-						output += "Fichier nonexistant\n";
-				}
+			else {
+				output += "Fichier nonexistant\n";
 			}
 			break;
 
