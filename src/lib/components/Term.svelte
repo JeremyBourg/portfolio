@@ -70,6 +70,7 @@ const send = () => {
 			output = "";
 			break;
 
+		// TODO: colorization
 		case "ls":
 			if (pwd == "/") {
 				output += "index.html\n";
@@ -86,6 +87,65 @@ const send = () => {
 			}
 			else {
 				pwd == "/";
+			}
+			break;
+		
+		case "open":
+			if (args == "") {
+				output += "Utilisation: open [FICHIER]";
+				break;
+			}
+			if (pwd == "/") {
+				switch (args) {
+					case "index":
+					case "index.html":
+						window.location.href = "/";
+						break;
+
+					case "projets":
+					case "projets.html":
+						window.location.href = "/projets";
+						break;
+
+					case "contact":
+					case "contact.html":
+						window.location.href = "/contact";
+						break;
+
+					default:
+						output += "Fichier nonexistant\n";
+				}
+			}
+			else if (pwd == "/projets") {
+				switch (args) {
+					case "bsc":
+					case "bsc.html":
+						window.location.href = "/projets/bsc";
+						break;
+
+					case "smog":
+					case "smog.html":
+						window.location.href = "/projets/smog";
+						break;
+
+					case "tek-it":
+					case "tek-it.html":
+						window.location.href = "/projets/tek-it";
+						break;
+
+					case "timconf":
+					case "timconf.html":
+						window.location.href = "/projets/timconf";
+						break;
+
+					case "portfolio":
+					case "portfolio.html":
+						window.location.href = "/projets/portfolio";
+						break;
+
+					default:
+						output += "Fichier nonexistant\n";
+				}
 			}
 			break;
 
