@@ -197,7 +197,7 @@ onMount(() => {
 				<p class="{line.endsWith('/') ? "term-color2" : line.endsWith(".html") ? "term-color1" : ""}">{line}</p>
 			{/each}
 		{/if}
-		<p>&gt; {input}{#if cursorVisible}|{/if}</p>
+		<p>&gt; {input}{#if cursorVisible}_{/if}</p>
 	</div>
 
 	<p class="extra">Essaye-le! Tape 'help'</p>
