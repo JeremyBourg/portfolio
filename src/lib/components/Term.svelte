@@ -1,7 +1,8 @@
 <script>
 import { onMount } from "svelte";
 
-let isActive = false;
+let locked = false;
+let active = false;
 let input = $state("");
 let cursorVisible = $state(false);
 let output = $state("");
@@ -10,11 +11,11 @@ let pwd = "/";
 const handleclick = (event) => {
 	const terminal = document.getElementById("terminal");
 
-	if (terminal && terminal.contains(event.target)) {
-		isActive = true;
+	if (!locked && terminal && terminal.contains(event.target)) {
+		active = true;
 	}
 	else {
-		isActive = false;
+		active = false;
 	}
 }
 
@@ -38,7 +39,8 @@ const send = () => {
 	else if(input == "sudo rm -rf /") {
 		const container = document.getElementById("term-container");
 		container.style.opacity = "0";
-		isActive = false;
+		active = false;
+		locked = true;
 	}
 	else if(cmd == "clear") {
 		output = "";
@@ -50,7 +52,7 @@ const send = () => {
 }
 
 const keydown = (event) => {
-	if (isActive) {
+	if (active) {
 		event.preventDefault();
 		if (event.key == "Backspace") {
 			input = input.substring(0, input.length - 1);
@@ -65,7 +67,7 @@ const keydown = (event) => {
 }
 
 const blink = () => {
-	if (isActive) {
+	if (active) {
 		cursorVisible = !cursorVisible;
 	}
 	else {
