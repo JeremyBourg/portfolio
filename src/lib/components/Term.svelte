@@ -70,13 +70,12 @@ const send = () => {
 			output = "";
 			break;
 
-		// TODO: colorization
 		case "ls":
 			if (pwd == "/") {
 				output += "index.html\n";
 				output += "contact.html\n";
 				output += "projets.html\n";
-				output += "projets/ (dossier)\n";
+				output += "projets/\n";
 			}
 			else if (pwd == "/projets") {
 				output += "portfolio.html\n";
@@ -194,7 +193,9 @@ onMount(() => {
 
 	<div id="terminal">
 		{#if output}
-			<pre>{output}</pre>
+			{#each output.split('\n') as line}
+				<p class="{line.endsWith('/') ? "term-color2" : line.endsWith(".html") ? "term-color1" : ""}">{line}</p>
+			{/each}
 		{/if}
 		<p>&gt; {input}{#if cursorVisible}|{/if}</p>
 	</div>
@@ -235,7 +236,7 @@ onMount(() => {
 	}
 }
 
-#terminal p, #terminal pre {
+#terminal p {
 	font-weight: 200;
 	font-size: var(--font-size-extra);
 }
