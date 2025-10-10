@@ -184,7 +184,7 @@ onMount(() => {
 	<div id="terminal">
 		{#if output}
 			{#each output.split('\n') as line}
-				<p class="{line.endsWith('/') ? "term-color2" : line.endsWith(".html") ? "term-color1" : ""}">{line}</p>
+				<p class="{line.startsWith('>') ? '' : line.endsWith('/') ? "term-color2" : line.endsWith(".html") ? "term-color1" : ""}">{line}</p>
 			{/each}
 		{/if}
 		<p>&gt; {input}{#if cursorVisible}_{/if}</p>
