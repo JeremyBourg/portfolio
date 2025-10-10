@@ -149,6 +149,9 @@ const send = () => {
 			}
 			break;
 
+		case "":
+			break;
+
 		default:
 			output += "Commande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
 			break;
