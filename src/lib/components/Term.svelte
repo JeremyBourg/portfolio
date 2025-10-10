@@ -24,6 +24,11 @@ const send = () => {
 	if(cmd == "help") {
 		output += "> " + cmd + "\nCommandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
 	}
+	else if(cmd == "sudo rm -rf /") {
+		const container = document.getElementById("term-container");
+		container.style.opacity = "0";
+		isActive = false;
+	}
 	else if(cmd == "clear") {
 		output = "";
 	}
@@ -83,6 +88,7 @@ onMount(() => {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	transition: opacity 0.3s ease;
 
 	p:last-child {
 		align-self: flex-end;
