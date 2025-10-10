@@ -70,6 +70,25 @@ const send = () => {
 			output = "";
 			break;
 
+		case "ls":
+			if (pwd == "/") {
+				output += "index.html\n";
+				output += "contact.html\n";
+				output += "projets.html\n";
+				output += "projets/ (dossier)\n";
+			}
+			else if (pwd == "/projets") {
+				output += "portfolio.html\n";
+				output += "bsc.html\n";
+				output += "smog.html\n";
+				output += "tek-it.html\n";
+				output += "timconf.html\n";
+			}
+			else {
+				pwd == "/";
+			}
+			break;
+
 		default:
 			output += "Commande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
 			break;
