@@ -32,42 +32,47 @@ const send = () => {
 
 	output += "> " + input + "\n";
 
-	if(cmd == "help") {
-		output += "Commandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
-	}
-
-	else if (cmd == "cd") {
-		if (args.length == 0) {
-			output += "Utilisation: cd [DOSSIER]\n";
-		}
-		else if (pwd == "/" && args == "projets" || args == "projets/") {
-			pwd = "/projets";
-		}
-		else if (args == "..") {
-			pwd = "/";
-		}
-		else {
-			output += args + ": Ce dossier n'existe pas\n";
-		}
-	}
-
-	else if (cmd == "pwd") {
-		output += pwd + "\n";
-	}
-
-	else if(input == "sudo rm -rf /") {
+	if(input == "sudo rm -rf /") {
 		const container = document.getElementById("term-container");
 		container.style.opacity = "0";
 		active = false;
 		locked = true;
-	}
-
-	else if(cmd == "clear") {
 		output = "";
+		input = "";
+		return;
 	}
 
-	else {
-		output += "Commande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
+	switch(cmd) {
+		case "help":
+			output += "Commandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
+			break;
+
+		case "cd":
+			if (args.length == 0) {
+				output += "Utilisation: cd [DOSSIER]\n";
+			}
+			else if (pwd == "/" && args == "projets" || args == "projets/") {
+				pwd = "/projets";
+			}
+			else if (args == "..") {
+				pwd = "/";
+			}
+			else {
+				output += args + ": Ce dossier n'existe pas\n";
+			}
+			break;
+
+		case "pwd":
+			output += pwd + "\n";
+			break;
+
+		case "clear":
+			output = "";
+			break;
+
+		default:
+			output += "Commande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
+			break;
 	}
 
 	input = "";
