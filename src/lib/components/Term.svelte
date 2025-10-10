@@ -65,7 +65,7 @@ const send = () => {
 
 	switch(cmd) {
 		case "help":
-			output += "Commandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
+			output += "Commandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\ncd .. pour remonter d'un niveau\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
 			break;
 
 		case "cd":
