@@ -24,30 +24,52 @@ const send = () => {
 	let args = "";
 	let cmd = input;
 
-	console.log(idx);
 	if (idx > 0) {
 		// get everything after space
 		args = input.substring(idx + 1);
 		cmd = input.substring(0, idx);
 	}
-	console.log("command: " + cmd);
-	console.log("arguments: " + args);
+
+	output += "> " + input + "\n";
 
 	if(cmd == "help") {
-		output += "> " + input + "\nCommandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
+		output += "Commandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
 	}
+
+	else if (cmd == "cd") {
+		if (args.length == 0) {
+			output += "Utilisation: cd [DOSSIER]\n";
+		}
+		else if (pwd == "/" && args == "projets" || args == "projets/") {
+			pwd = "/projets";
+		}
+		else if (args == "..") {
+			pwd = "/";
+		}
+		else {
+			output += args + ": Ce dossier n'existe pas\n";
+		}
+	}
+
+	else if (cmd == "pwd") {
+		output += pwd + "\n";
+	}
+
 	else if(input == "sudo rm -rf /") {
 		const container = document.getElementById("term-container");
 		container.style.opacity = "0";
 		active = false;
 		locked = true;
 	}
+
 	else if(cmd == "clear") {
 		output = "";
 	}
+
 	else {
-		output += "> " + input + "\nCommande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
+		output += "Commande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
 	}
+
 	input = "";
 }
 
