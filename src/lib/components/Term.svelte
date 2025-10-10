@@ -2,7 +2,7 @@
 import { onMount } from "svelte";
 
 let isActive = false;
-let cmd = $state("");
+let input = $state("");
 let cursorVisible = $state(false);
 let output = $state("");
 let pwd = "/";
@@ -19,12 +19,23 @@ const handleclick = (event) => {
 }
 
 const send = () => {
-	console.log("command sent: " + cmd);
+	const idx = input.indexOf(" ");
+	let args = "";
+	let cmd = input;
+
+	console.log(idx);
+	if (idx > 0) {
+		// get everything after space
+		args = input.substring(idx + 1);
+		cmd = input.substring(0, idx);
+	}
+	console.log("command: " + cmd);
+	console.log("arguments: " + args);
 
 	if(cmd == "help") {
-		output += "> " + cmd + "\nCommandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
+		output += "> " + input + "\nCommandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
 	}
-	else if(cmd == "sudo rm -rf /") {
+	else if(input == "sudo rm -rf /") {
 		const container = document.getElementById("term-container");
 		container.style.opacity = "0";
 		isActive = false;
@@ -33,22 +44,22 @@ const send = () => {
 		output = "";
 	}
 	else {
-		output += "> " + cmd + "\nCommande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
+		output += "> " + input + "\nCommande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
 	}
-	cmd = "";
+	input = "";
 }
 
 const keydown = (event) => {
 	if (isActive) {
 		event.preventDefault();
 		if (event.key == "Backspace") {
-			cmd = cmd.substring(0, cmd.length - 1);
+			input = input.substring(0, input.length - 1);
 		}
 		else if (event.key == "Enter") {
 			send();
 		}
 		else if (event.key.length == 1) {
-			cmd += event.key;
+			input += event.key;
 		}
 	}
 }
@@ -77,7 +88,7 @@ onMount(() => {
 		{#if output}
 			<pre>{output}</pre>
 		{/if}
-		<p>&gt; {cmd}{#if cursorVisible}|{/if}</p>
+		<p>&gt; {input}{#if cursorVisible}|{/if}</p>
 	</div>
 
 	<p class="extra">Essaye-le! Tape 'help'</p>
