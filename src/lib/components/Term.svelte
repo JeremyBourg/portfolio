@@ -4,22 +4,32 @@ import { onMount } from "svelte";
 let isActive = false;
 let cmd = $state("");
 let cursorVisible = $state(false);
+let output = $state("");
+let pwd = "/";
 
 const handleclick = (event) => {
 	const terminal = document.getElementById("terminal");
 
 	if (terminal && terminal.contains(event.target)) {
-		console.log("clicked inside terminal");
 		isActive = true;
 	}
 	else {
-		console.log("clicked outside terminal");
 		isActive = false;
 	}
 }
 
 const send = () => {
 	console.log("command sent: " + cmd);
+
+	if(cmd == "help") {
+		output += "> " + cmd + "\nCommandes: \nhelp - affiche cette liste\nls - Répertorie les fichiers\ncd [DOSSIER] - Change de dossier\nclear - Nettoye le terminal\nopen [FICHIER] - Ouvre un fichier\n";
+	}
+	else if(cmd == "clear") {
+		output = "";
+	}
+	else {
+		output += "> " + cmd + "\nCommande inconnue.\nFaites 'help' pour voir la liste des commandes.\n"
+	}
 	cmd = "";
 }
 
@@ -59,9 +69,12 @@ onMount(() => {
 	<p class="extra">Mini-terminal</p>
 
 	<div id="terminal">
+		{#if output}
+			<pre>{output}</pre>
+		{/if}
 		<p>&gt; {cmd}{#if cursorVisible}|{/if}</p>
 	</div>
-	
+
 	<p class="extra">Essaye-le! Tape 'help'</p>
 </div>
 
@@ -97,8 +110,8 @@ onMount(() => {
 	}
 }
 
-#terminal p {
-	font-weight: 300;
+#terminal p, #terminal pre {
+	font-weight: 200;
 	font-size: var(--font-size-extra);
 }
 </style>
