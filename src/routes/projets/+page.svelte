@@ -61,7 +61,7 @@ h1 {
 }
 
 .project-info {
-	z-index: 2;
+	z-index: 3;
 
 	& > * + * {
 		margin-top: 8px;
@@ -76,6 +76,24 @@ img {
 
 .img-container {
 	max-width: 50%;
+	position: relative;
+}
+
+.img-container::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.card-left .img-container::before {
+	background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    transform: translateX(7%);
+}
+
+.card-right .img-container::before {
+	background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    transform: translateX(-7%);
 }
 
 .card-left img {
@@ -95,6 +113,7 @@ img {
 	bottom: 0;
 	left: 0;
 	transform: translateY(50%);
+	z-index: 2;
 }
 
 .card-right .project-info {
@@ -107,6 +126,7 @@ img {
 	right: 0;
 	bottom: 0;
 	transform: translateY(50%);
+	z-index: 2;
 }
 .separator {
 	height: 2px;
