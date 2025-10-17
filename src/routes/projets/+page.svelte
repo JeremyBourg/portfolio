@@ -56,12 +56,15 @@ h1 {
 }
 
 .project-card {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	position: relative;
 }
 
 .project-info {
 	z-index: 3;
+	margin-top: 10%;
+	margin-bottom: 10%;
 
 	& > * + * {
 		margin-top: 8px;
@@ -72,10 +75,11 @@ img {
 	display: block;
 	object-fit: cover;
 	height: 100%;
+	width: 100%;
 }
 
 .img-container {
-	max-width: 50%;
+	width: 100%;
 	position: relative;
 }
 
@@ -104,9 +108,8 @@ img {
 }
 
 .card-left .project-info {
-	margin-top: 5%;
 	margin-left: -10%;
-	padding-right: 10%;
+	padding-right: 20%;
 }
 .card-left .button-container {
 	position: absolute;
@@ -117,8 +120,7 @@ img {
 }
 
 .card-right .project-info {
-	margin-top: 5%;
-	padding-left: 10%;
+	padding-left: 15%;
 	margin-right: -10%;
 }
 .card-right .button-container {
