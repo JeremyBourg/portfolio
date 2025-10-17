@@ -11,7 +11,9 @@ let {data} = $props();
         {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
             <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
                 {#if index % 2 === 0}
-                    <img src="{thumbnail}" alt="">
+				<div class="img-container">
+					<img src="{thumbnail}" alt="">
+				</div>
                 {/if}
                 <div class="project-info">
                     <h3>{subject}</h3>
@@ -21,7 +23,9 @@ let {data} = $props();
                     <p>{summary}</p>
                 </div>
                 {#if index % 2 !== 0}
-                    <img src="{thumbnail}" alt="">
+				<div class="img-container">
+					<img src="{thumbnail}" alt="">
+				</div>
                 {/if}
                 <div class="button-container">
                     <CTA label={"En savoir plus"} href={"/projets/" + slug}/>
@@ -62,6 +66,16 @@ h1 {
 	& > * + * {
 		margin-top: 8px;
 	}
+}
+
+img {
+	display: block;
+	object-fit: cover;
+	height: 100%;
+}
+
+.img-container {
+	max-width: 50%;
 }
 
 .card-left img {

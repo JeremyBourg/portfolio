@@ -1,7 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 
-let { isOpen, children} = $props();
+let { isOpen, src } = $props();
 
 let dialog = $state();
 
@@ -10,17 +10,17 @@ $effect(() => {
 });
 </script>
 
-<div onclick={() => isOpen = true}>
-	{@render children?.()}
-	<img src="{click}" alt="">
+<div onclick={() => isOpen = true} style="height: 100%;">
+	<img id="img" src="{src}" alt="">
+	<img id="click" src="{click}" alt="">
 </div>
 
 <dialog
 	bind:this={dialog}
 	onclose={() => { isOpen = false; }}
-	onclick={(e) => { if (e.target === dialog ) dialog.close(); }}
+	onclick={() => { dialog.close(); }}
 >
-	{@render children?.()}
+	<img src="{src}" alt="">
 </dialog>
 
 <!-- TODO: add close modal button as indication -->
@@ -32,6 +32,17 @@ dialog {
 	outline: none;
 	background: none;
 	padding: 0;
+	height: 75vh;
+	width: 75vw;
+}
+
+dialog img {
+	height: 100%;
+	min-width: 60%;
+	max-width: 100%;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
 }
 dialog::backdrop {
 	background: rgba(0, 0, 0, 0.6);
@@ -40,8 +51,10 @@ div {
 	position: relative;
 	cursor: pointer;
 
-	img {
+	img#img {
 		display: block;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	&::before {
@@ -52,7 +65,7 @@ div {
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 
-	img {
+	img#click {
 		display: block;
 		position: absolute;
 		bottom: 0;

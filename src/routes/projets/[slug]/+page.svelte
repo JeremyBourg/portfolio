@@ -27,9 +27,7 @@ let { data } = $props();
 			<section>
 				<h2>{section.title}</h2>
 				<div class="modal">
-					<Modal>
-						<img src="{section.image}" alt="" style="display: block;">
-					</Modal>
+					<Modal src={section.image} />
 					<div>
 						{@html section.content}
 					</div>
