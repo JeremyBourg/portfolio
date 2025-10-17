@@ -46,7 +46,7 @@ import Term from '$lib/components/Term.svelte';
 	</div>
 
 	<div class="second">
-		<div>
+		<div data-speed="0.85">
 			<h2>Programmeur junior</h2>
 			<p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
 			<br>
@@ -77,7 +77,7 @@ import Term from '$lib/components/Term.svelte';
 			</div>
 		</div>
 
-		<div class="small">
+		<div class="small" data-speed="0.85">
 			<Term />
 		</div>
 	</div>

@@ -3,10 +3,27 @@
     import Cursor from '$lib/components/Cursor.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import Header from '$lib/components/Header.svelte';
+	import { gsap } from 'gsap';
+	import { ScrollSmoother } from 'gsap/ScrollSmoother';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { onMount } from 'svelte';
 
     import '$lib/styles/main.scss'
 
+	let smoother;
 	let { children } = $props();
+
+	if (typeof window !== undefined) {
+		gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+	}
+
+	onMount(() => {
+		smoother = ScrollSmoother.create({
+			scroll: 1,
+			effects: true,
+			smoothTouch: 0.1,
+		});
+	})
 </script>
 
 <svelte:head>
@@ -16,6 +33,11 @@
 <Cursor />
 <Header />
 
-{@render children?.()}
+<div id="smooth-wrapper">
+	<div id="smooth-content">
 
-<Footer />
+		{@render children?.()}
+
+		<Footer />
+	</div>
+</div>
