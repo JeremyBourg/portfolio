@@ -1,28 +1,84 @@
 <script>
 import CTA from "$lib/components/CTA.svelte";
-let { data, form } = $props();
+
+let name = $state('');
+let email = $state('');
+let message = $state('');
+let response = $state(null);
+
+const submitForm = async (event) => {
+	event.preventDefault();
+	const data = new URLSearchParams();
+	data.append('name', name);
+	data.append('email', email);
+	data.append('message', message);
+
+	const request = await fetch('/form.php', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: data
+	});
+
+	if (!request.ok) {
+		console.error('HTTP Error:', request.status);
+		return;
+	}
+
+	const result = await request.json();
+	if (result.success) {
+		response = { success: true };
+	}
+	else {
+		response = { success: false, ...result };
+	}
+}
+
+const reset = () => {
+	response = null;
+	name = '';
+	email = '';
+	message = '';
+	window.location.reload();
+}
+
 </script>
 
 <div class="wrapper">
-{#if !form?.success}
+{#if response?.databaseError}
+<section class="response">
+	<h1>Oups!</h1>
+	<div>
+	<p>Désolé. Il y a un problème avec le serveur. Ce n'est pas de votre faute.</p>
+	<br>
+	<p>S'il vous plaît veuillez me contacter par courriel et je règlerais le problème dès que possible.</p>
+	<br>
+	{#if response?.errorCode}
+	<p style="font-size: var(--font-size-extra)">Code d'erreur: {response?.errorCode}</p>
+	{/if}
+	</div>
+	<CTA href="/" label="Retourner à l'accueil" />
+</section>
+{:else if !response?.success}
     <h1>On se parle?</h1>
     <p>Vous avez des questions ou un projet en tête? Je suis là pour transformer vos idées en réalité, sans bugs (ou presque)!</p>
-    <form method="POST">
-		{#if form?.missing}<p class="error">Tous les champs sont requis</p>{/if}
+    <form onsubmit={submitForm}>
+		{#if response?.missing}<p class="error">Tous les champs sont requis</p>{/if}
         <fieldset>
 			<div id="input-container">
-				<input name="name" type="text" placeholder="Nom" value={form?.name ?? ''} class={form?.name == '' && form?.missing ? "error" : ''}>
+				<input name="name" type="text" placeholder="Nom" bind:value={name} class={response?.name == '' && response?.missing ? "error" : ''}>
 			</div>
 			<div id="input-container">
-				<input name="email" type="email" placeholder="Courriel" value={form?.email ?? ''} class={form?.email == '' && form?.missing ? "error" : ''}>
+				<input name="email" type="email" placeholder="Courriel" bind:value={email} class={response?.email == '' && response?.missing ? "error" : ''}>
 			</div>
 			<div id="message-container">
 				<textarea
 				name="message"
 				id="message"
 				placeholder="Message"
-				value={form?.message ?? ''}
-				class={form?.message == '' && form?.missing ? "error" : ''}
+				bind:value={message}
+				class={response?.message == '' && response?.missing ? "error" : ''}
 				></textarea>
 			</div>
         </fieldset>
@@ -31,10 +87,14 @@ let { data, form } = $props();
         </div>
     </form>
 {:else}
-<section class="success">
+<section class="response">
 	<h1>Merci de m'avoir contacté!</h1>
-	<p>Au plaisir d'échanger avec vous!</p>
+	<div>
+		<p>Au plaisir d'échanger avec vous!</p>
+	</div>
+	<div onclick={reset}>
 	<CTA href="/contact" label="Retourner au formulaire" />
+	</div>
 </section>
 {/if}
 
@@ -49,7 +109,7 @@ let { data, form } = $props();
         </div>
         <div>
             <p>CV:</p>
-            <a href="/link/to/pdf" download>Télécharger (PDF)</a>
+            <a href="#" download>Télécharger (PDF)</a>
         </div>
     </div>
 </div>
@@ -71,9 +131,9 @@ input.error, textarea.error {
     margin-bottom: 50px;
 }
 
-section.success {
+section.response {
     padding: 100px 0;
-	p {
+	div {
 		margin-bottom: 100px;
 	}
 }
