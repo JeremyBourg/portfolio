@@ -36,5 +36,5 @@ Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes sp�
 ## License
 
 Ce portfolio est un logiciel libre.
-Vous pouvez le redistribuer et/ou le modifier sous les conditions de la [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html) telle que publiée par la Free Software Foundation.
+Vous pouvez le redistribuer et/ou le modifier sous les conditions de la [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) telle que publiée par la Free Software Foundation, soit la version 3 de la License, ou (à votre option) toute version ultérieure.
 
