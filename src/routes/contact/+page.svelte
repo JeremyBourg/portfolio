@@ -1,14 +1,31 @@
+<script>
+  let { data, form } = $props();
+</script>
+
 <div class="wrapper">
     <h1>On se parle?</h1>
     <p>Vous avez des questions ou un projet en tête? Je suis là pour transformer vos idées en réalité, sans bugs (ou presque)!</p>
-    <form action="">
+    <form method="POST">
+		{#if form?.missing}<p class="error">Tous les champs sont requis</p>{/if}
         <fieldset>
-            <input type="text" placeholder="Nom">
-            <input type="email" placeholder="Courriel">
-            <textarea id="message" placeholder="Message"></textarea>
+			<div id="input-container">
+				<input name="name" type="text" placeholder="Nom" value={form?.name ?? ''} class={form?.name == '' && form?.missing ? "error" : ''}>
+			</div>
+			<div id="input-container">
+				<input name="email" type="email" placeholder="Courriel" value={form?.email ?? ''} class={form?.email == '' && form?.missing ? "error" : ''}>
+			</div>
+			<div id="message-container">
+				<textarea
+				name="message"
+				id="message"
+				placeholder="Message"
+				value={form?.message ?? ''}
+				class={form?.message == '' && form?.missing ? "error" : ''}
+				></textarea>
+			</div>
         </fieldset>
         <div id="submit">
-            <input type="submit" value="Soumettre">
+            <button>Soumettre</button>
         </div>
     </form>
 
@@ -29,6 +46,17 @@
 </div>
 
 <style>
+:root {
+	--color-error: #F74844;
+}
+p.error {
+	color: var(--color-error);
+}
+
+input.error, textarea.error {
+	border-color: var(--color-error);
+}
+
 .wrapper > h1 {
     padding-top: 100px;
     margin-bottom: 50px;
@@ -62,6 +90,7 @@ fieldset {
 
     input, textarea {
         padding: 16px;
+		width: 100%;
         background-color: transparent;
         border: 4px var(--color-secondary) solid;
         font-family: var(--font-secondary);
@@ -76,10 +105,12 @@ fieldset {
     }
 }
 
-textarea {
+#message-container {
     grid-column: 1 / -1;
-    height: 150px;
-    resize: vertical;
+	textarea {
+		height: 150px;
+		resize: vertical;
+	}
 }
 
 .info {
