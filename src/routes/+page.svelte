@@ -17,7 +17,7 @@ import Term from '$lib/components/Term.svelte';
 		<h1 data-speed="0.95">À propos</h1>
 
 		<div data-speed="0.85">
-			<h2>Compétences et languages</h2>
+			<h2 data-speed="1.05">Compétences et languages</h2>
 			<p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
 			<br>
 			<p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
@@ -28,7 +28,7 @@ import Term from '$lib/components/Term.svelte';
 		<blockquote data-speed="0.8"><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
 
 		<div>
-			<h2>Intérêts</h2>
+			<h2 data-speed="1.05">Intérêts</h2>
 			<p>En tant que <span>Mega Nerd™</span>, mes intérêts vont avec.</p>
 			<br>
 			<ul>
@@ -47,20 +47,20 @@ import Term from '$lib/components/Term.svelte';
 
 	<div class="second">
 		<div data-speed="0.85">
-			<h2>Programmeur junior</h2>
+			<h2 data-speed="1.05">Programmeur junior</h2>
 			<p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
 			<br>
 			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
 			<br>
 			<p>Je vise à apprendre des technologies front-end et back-end.</p>
 
-			<div style="margin-top: 100px;">
+			<div style="margin-top: 100px;" data-speed="1.1">
 				<CTA label={"Voir les projets"} href={"/projets"}/>
 			</div>
 		</div>
 
 		<div class="small">
-			<h2>Qualités</h2>
+			<h2 data-speed="1.05">Qualités</h2>
 			<div id="qualities">
 				<div>
 					<h3><span>Résolution de problèmes</span></h3>
@@ -85,7 +85,7 @@ import Term from '$lib/components/Term.svelte';
 
 <div class="wrapper">
 	<div id="software" data-speed="0.85">
-		<h2>Logiciels</h2>
+		<h2 data-speed="1.05">Logiciels</h2>
 		<ul>
 			<li><span>Linux</span>, Gentoo sur mon portable et Arch sur desktop</li>
 			<li>(neo)<span>vim</span>, le meilleur éditeur de texte</li>
