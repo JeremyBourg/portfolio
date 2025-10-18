@@ -14,9 +14,9 @@ import Term from '$lib/components/Term.svelte';
 			<img src="{photo}" alt="">
 		</div>
 
-		<h1>À propos</h1>
+		<h1 data-speed="0.95">À propos</h1>
 
-		<div>
+		<div data-speed="0.85">
 			<h2>Compétences et languages</h2>
 			<p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
 			<br>
@@ -25,7 +25,7 @@ import Term from '$lib/components/Term.svelte';
 			<p>J'apprend présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
 		</div>
 
-		<blockquote><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
+		<blockquote data-speed="0.8"><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
 
 		<div>
 			<h2>Intérêts</h2>
@@ -84,7 +84,7 @@ import Term from '$lib/components/Term.svelte';
 </div>
 
 <div class="wrapper">
-	<div id="software">
+	<div id="software" data-speed="0.85">
 		<h2>Logiciels</h2>
 		<ul>
 			<li><span>Linux</span>, Gentoo sur mon portable et Arch sur desktop</li>
