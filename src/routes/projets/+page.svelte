@@ -11,7 +11,7 @@ let {data} = $props();
         {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
             <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
                 {#if index % 2 === 0}
-				<div class="img-container">
+				<div class="img-container" data-speed="0.91">
 					<img src="{thumbnail}" alt="">
 				</div>
                 {/if}
@@ -23,7 +23,7 @@ let {data} = $props();
                     <p>{summary}</p>
                 </div>
                 {#if index % 2 !== 0}
-				<div class="img-container">
+				<div class="img-container" data-speed="0.85">
 					<img src="{thumbnail}" alt="">
 				</div>
                 {/if}
@@ -34,7 +34,7 @@ let {data} = $props();
         {/each}
     </div>
 
-    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;">
+    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; margin-top: 150px;" data-speed="0.85">
         <CTA label={"Intéressé?"} href={"/contact"} />
     </div>
 </div>

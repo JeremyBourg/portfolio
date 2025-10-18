@@ -77,7 +77,7 @@ import Term from '$lib/components/Term.svelte';
 			</div>
 		</div>
 
-		<div class="small" data-speed="0.85">
+		<div class="small" data-speed="0.75">
 			<Term />
 		</div>
 	</div>
@@ -95,7 +95,7 @@ import Term from '$lib/components/Term.svelte';
 		<br>
 		<p>J'ai aussi de l'expérience avec <span>Figma</span>, <span>After Effects</span> et <span>Premiere Pro</span>.</p>
 
-		<div id="gentoo">
+		<div id="gentoo" data-speed="0.90">
 			<img src="{gentoo}" alt="">
 			<p class="extra">Mon portable.</p>
 		</div>
