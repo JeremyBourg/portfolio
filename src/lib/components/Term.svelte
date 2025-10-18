@@ -1,5 +1,6 @@
 <script>
 import { onMount } from "svelte";
+import { goto } from "$app/navigation";
 
 let locked = false;
 let active = false;
@@ -120,7 +121,9 @@ const send = () => {
 			const redirectURL = redirects[pwd]?.[args];
 
 			if (redirectURL) {
-				window.location.href = redirectURL;
+				goto(redirectURL);
+				output = "";
+				active = false;
 			}
 			else {
 				output += "Fichier nonexistant\n";
