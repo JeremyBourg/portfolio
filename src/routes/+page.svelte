@@ -87,7 +87,7 @@ import Term from '$lib/components/Term.svelte';
 	<div id="software" data-speed="0.85">
 		<h2 data-speed="1.05">Logiciels</h2>
 		<ul>
-			<li><span>Linux</span>, Gentoo sur mon portable et Arch sur desktop</li>
+			<li><span>Linux</span>, principalement Gentoo</li>
 			<li>(neo)<span>vim</span>, le meilleur éditeur de texte</li>
 			<li><span>lazygit</span> pour le Git</li>
 			<li><span>lftp</span> et FileZilla pour le FTP</li>
