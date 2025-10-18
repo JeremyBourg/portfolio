@@ -1,8 +1,10 @@
 <script>
-  let { data, form } = $props();
+import CTA from "$lib/components/CTA.svelte";
+let { data, form } = $props();
 </script>
 
 <div class="wrapper">
+{#if !form?.success}
     <h1>On se parle?</h1>
     <p>Vous avez des questions ou un projet en tête? Je suis là pour transformer vos idées en réalité, sans bugs (ou presque)!</p>
     <form method="POST">
@@ -28,6 +30,13 @@
             <button>Soumettre</button>
         </div>
     </form>
+{:else}
+<section class="success">
+	<h1>Merci de m'avoir contacté!</h1>
+	<p>Au plaisir d'échanger avec vous!</p>
+	<CTA href="/contact" label="Retourner au formulaire" />
+</section>
+{/if}
 
     <div class="info">
         <div>
@@ -62,8 +71,15 @@ input.error, textarea.error {
     margin-bottom: 50px;
 }
 
+section.success {
+    padding: 100px 0;
+	p {
+		margin-bottom: 100px;
+	}
+}
+
 form {
-    padding: 50px 0;
+	padding: 50px 0;
 
     & > * + * {
         margin-top: 20px;
@@ -138,7 +154,6 @@ fieldset {
         transition: color 0.3s ease-out;
     }
 }
-
 #submit::before {
 	content: '';
 	position: absolute;
