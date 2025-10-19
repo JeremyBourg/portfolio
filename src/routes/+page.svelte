@@ -89,8 +89,7 @@ import Term from '$lib/components/Term.svelte';
 		<ul>
 			<li><span>Linux</span>, principalement Gentoo</li>
 			<li>(neo)<span>vim</span>, le meilleur éditeur de texte</li>
-			<li><span>lazygit</span> pour le Git</li>
-			<li><span>lftp</span> et FileZilla pour le FTP</li>
+			<li><span>tmux</span>, presque tout se passe dans mon terminal.</li>
 		</ul>
 		<br>
 		<p>J'ai aussi de l'expérience avec <span>Figma</span>, <span>After Effects</span> et <span>Premiere Pro</span>.</p>
