@@ -52,7 +52,7 @@ import Term from '$lib/components/Term.svelte';
 			<br>
 			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
 			<br>
-			<p>Je vise à apprendre des technologies front-end et back-end.</p>
+			<p>Je vise à apprendre des technologies back-end, mais je suis aussi ouvert au front-end.</p>
 
 			<div style="margin-top: 100px;" data-speed="1.1">
 				<CTA label={"Voir les projets"} href={"/projets"}/>
