@@ -42,7 +42,7 @@ let { data } = $props();
 				{@html section.content}
 			</div>
 			<br>
-			<Swiper loop slides={section.slides} />
+			<Swiper slides={section.slides} />
 		</section>
 		{/if}
 	{/each}

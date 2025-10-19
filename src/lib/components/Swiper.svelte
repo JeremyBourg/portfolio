@@ -47,17 +47,11 @@ onMount(() => {
 		{/each}
 	</div>
 
-	<div class="swiper-pagination"></div>
 	<div class="swiper-button-prev"></div>
 	<div class="swiper-button-next"></div>
 </div>
 
 <style>
-.swiper {
-	overflow: visible !important;
-	overflow-x: hidden !important;
-}
-
 .slide-img {
 	height: 400px;
 }
