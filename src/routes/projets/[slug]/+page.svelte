@@ -1,6 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 import Modal from '$lib/components/Modal.svelte';
+import Swiper from "$lib/components/Swiper.svelte";
 import './style.scss';
 
 let { data } = $props();
@@ -35,7 +36,14 @@ let { data } = $props();
 			</section>
 		{/if}
 		{#if section.type === 'carousel'}
-			<!-- ... content -->
+		<section>
+			<h2>{section.title}</h2>
+			<div>
+				{@html section.content}
+			</div>
+			<br>
+			<Swiper loop slides={section.slides} />
+		</section>
 		{/if}
 	{/each}
 </div>

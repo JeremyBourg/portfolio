@@ -55,6 +55,7 @@ div {
 		display: block;
 		height: 100%;
 		object-fit: cover;
+		object-position: left;
 	}
 
 	&::before {

@@ -1,4 +1,9 @@
-import bscImage from '$lib/assets/gentoo.jpg'
+import bscImage from '$lib/assets/bscImage.png'
+import bscDesign from '$lib/assets/bsc_design.png'
+import bscCmpHeader from '$lib/assets/bscCmpHeader.png'
+import bscCmpScrolly from '$lib/assets/bscCmpScrolly.png'
+import bscCmpYoutube from '$lib/assets/bscCmpYoutube.png'
+import portfolioThumbnail from '$lib/assets/portfolio-thumbnail.png'
 
 // TODO: Add HTML content to posts
 
@@ -11,7 +16,7 @@ export const posts = [
 		type: 'Projet scolaire*',
 		description: "<p>Ce portfolio est un projet scolaire, mais l'apprentissage de <span>SvelteKit</span> et <span>Vite</span> est une décision que j'ai prise pour élargir mes horizons au-delà du cadre du cours.</p>",
 		summary: "Le portfolio que vous êtes en train de regarder.",
-		thumbnail: bscImage,
+		thumbnail: portfolioThumbnail,
 	},
 	{
 		slug: 'bsc',
@@ -24,18 +29,32 @@ export const posts = [
 		thumbnail: bscImage,
 		sections: [
 			{
-				type: 'modal',
+				type: 'carousel',
 				title: "Intégration",
-				image: bscImage,
 				content: "<p>L’intégration se faisait avec l’aide de composantes <span>JavaScript</span> pour les <span>carrousels</span>, l’en-tête, et les animation de <span>scrollytelling</span>.</p> <br> <p>Les composantes sont flexibles et rendent le code plus simple et réutilisable.</p>",
+
+				slides: [
+					{
+						image: bscCmpHeader,
+						caption: 'Composante Header',
+					},
+					{
+						image: bscCmpScrolly,
+						caption: 'Composante Scrolly',
+					},
+					{
+						image: bscCmpYoutube,
+						caption: 'Composante Youtube',
+					},
+				],
 			},
 			{
 				type: 'modal',
 				title: "Design",
-				image: bscImage,
+				image: bscDesign,
 				content: "<p>Bien que le design ne soit pas ma force principale, j’ai su quand même respecter les <span>principes</span> et appliquer une direction artistique pour créer un <span>site cohérent</span> qui marche sur mobile et sur desktop.</p>",
 			},
-		]
+		],
 	},
 	{
 		slug: 'smog',
