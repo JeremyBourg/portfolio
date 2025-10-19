@@ -16,7 +16,7 @@ let { data } = $props();
 			<h4>{data.post.skills}</h4>
 			<h3>{data.post.type}</h3>
 		</div>
-		<img src="{data.post.thumbnail}" alt="">
+		<img src="{data.post.thumbnail}" alt="" data-speed="0.85">
 	</section>
 	<section>
 		<h2>Description</h2>
