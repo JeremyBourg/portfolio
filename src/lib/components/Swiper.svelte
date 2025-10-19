@@ -60,4 +60,12 @@ p {
 	font-size: var(--font-size-extra);
 	color: var(--color-tertiary);
 }
+
+.swiper {
+	--swiper-navigation-color: var(--color-white);
+}
+
+.swiper-button-prev, .swiper-button-next {
+	mix-blend-mode: difference;
+}
 </style>
