@@ -111,8 +111,8 @@ export const posts = [
 				type: "modal",
 				title: "Inspiration",
 				image: tekit_insp,
-				content: "<p>Je suis allé prendre de l'inspiration en ligne avec des styles \
-				d'artistes que j'aime, entre autre \
+				content: "<p>Je suis allé prendre de l'inspiration en ligne avec\
+				des éléments ou des styles d'artistes que j'aime, entre autre \
 				<a class='external' \
 				href='https://youtube.com/stcubing' \
 				target='_blank'>\
@@ -129,7 +129,8 @@ export const posts = [
 				<a class='external' \
 				href='https://www.youtube.com/watch?v=iKWUcsAjdYE' \
 				target='_blank'>\
-				Icarus par stcubing</a>.</p>",
+				Icarus par stcubing</a>.<br><br>\
+				À droite c'est moi.</p>",
 			}
 		]
 	},
@@ -217,8 +218,7 @@ export const posts = [
 				un des plus populaires, connu pour son aspect <span>Do-It-Yourself</span>, \
 				où il n'y a presque rien de préinstallé. <br><br> J'ai essayé \
 				(et échoué plusieurs fois) dans une <span>machine virtuelle</span> \
-				avant d'aller l'installer sur un vrai ordinateur (bare metal) \
-				deux mois plus tard.</p>",
+				avant d'aller l'installer sur un vrai ordinateur (bare metal).</p>",
 				slides: [
 					{
 						image: linux_arch_vm_pacstrap,
