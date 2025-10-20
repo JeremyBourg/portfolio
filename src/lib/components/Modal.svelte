@@ -1,7 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 
-let { isOpen, src, video } = $props();
+let { isOpen, src, video, thumb } = $props();
 
 let dialog = $state();
 
@@ -17,7 +17,7 @@ $effect(() => {
 });
 </script>
 
-<div onclick={() => isOpen = true} style="height: 100%;">
+<div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;">
 	<img id="img" src="{src}" alt="">
 	<img id="click" src="{click}" alt="">
 </div>
@@ -44,8 +44,7 @@ dialog {
 	outline: none;
 	background: none;
 	padding: 0;
-	height: 75vh;
-	width: 75vw;
+	height: 85vh;
 }
 
 dialog img {
@@ -79,15 +78,17 @@ dialog::backdrop {
 div {
 	position: relative;
 	cursor: pointer;
+	max-height: 50vh;
 
 	img#img {
 		display: block;
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: left;
 	}
 
-	&::before {
+	#modal-container::before {
 		content: '';
 		position: absolute;
 		pointer-events: none;

@@ -10,13 +10,17 @@ let { data } = $props();
 <div class="wrapper">
 	<h1>{data.post.title}</h1>
 	<section id="info">
-		<div>
+		<div id="info-content">
 			<h2>{data.post.subject}</h2>
 			<div id="separator"></div>
 			<h4>{data.post.skills}</h4>
 			<h3>{data.post.type}</h3>
 		</div>
-		<img src="{data.post.thumbnail}" alt="" data-speed="0.85">
+		{#if data.post.clickable}
+			<Modal thumb src={data.post.thumbnail} />
+		{:else}
+			<img src="{data.post.thumbnail}" alt="" data-speed="0.85">
+		{/if}
 	</section>
 	<section>
 		<h2>Description</h2>
