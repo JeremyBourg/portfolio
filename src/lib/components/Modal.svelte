@@ -9,10 +9,10 @@ $effect(() => {
 	const video = document.getElementById("video");
 	if (isOpen) {
 		dialog.showModal();
-		video.play();
+		if(video) video.play();
 	}
 	else {
-		video.pause();
+		if(video) video.pause();
 	}
 });
 </script>
