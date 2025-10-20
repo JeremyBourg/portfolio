@@ -88,7 +88,7 @@ nav {
     cursor: pointer;
     padding: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 999;
     top: 16px;
     right: 20px;
     width: 50px;
