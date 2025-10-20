@@ -1,3 +1,4 @@
+import gentoo from '$lib/assets/gentoo.jpg'
 import bscImage from '$lib/assets/bscImage.png'
 import bscDesign from '$lib/assets/bsc_design.png'
 import bscCmpHeader from '$lib/assets/bscCmpHeader.png'
@@ -12,6 +13,13 @@ import pf_dynamic from '$lib/assets/pf_dynamic.png'
 import portfolioThumbnail from '$lib/assets/portfolio-thumbnail.png'
 import pf_terminal from '$lib/assets/pf_terminal.webp'
 import pf_term_video from '$lib/assets/terminal.webm'
+import linux_arch from '$lib/assets/arch.png'
+import linux_arch_vm from '$lib/assets/linux_arch_vm.png'
+import linux_arch_vm_pacstrap from '$lib/assets/linux_arch_vm_pacstrap.png'
+import linux_gentoo from '$lib/assets/linux_gentoo.png'
+import linux_first from '$lib/assets/linux_first_gentoo.jpg'
+import thinkpad_1 from '$lib/assets/thinkpad_1.jpg'
+import thinkpad_2 from '$lib/assets/thinkpad_2.jpg'
 
 // TODO: Add HTML content to posts
 
@@ -81,6 +89,7 @@ export const posts = [
 		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
 		summary: "Refonte du site d’une municipalité. Conçu de A à Z du design jusqu’à l’intégration.",
 		thumbnail: bscImage,
+		clickable: true,
 		sections: [
 			{
 				type: 'carousel',
@@ -131,13 +140,62 @@ export const posts = [
 		thumbnail: bscImage,
 	},
 	{
-		slug: 'timconf',
-		title: 'timConf',
-		subject: 'Intégration web',
-		skills: 'HTML, CSS, JavaScript',
-		type: 'Projet scolaire',
-		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
-		summary: "Intégration d’un site web multi-page événementiel qui présente des conférences et des conférenciers.",
-		thumbnail: bscImage,
+		slug: 'gentoo-linux',
+		title: 'Gentoo Linux',
+		subject: 'Installation et configuration',
+		skills: 'Linux',
+		type: 'Projet personnel',
+		description: "<p>Dans mes temps libres, j'aime configurer <span>Linux</span> et des programmes sur mon système pour avoir un environnement qui <span>répond à mes besoins</span> et qui me rend plus <span>confortable</span>, parce que je crois que le confort est vital à la productivité. <br><br> Cette page sert aussi de documentation de mon parcours.</p>",
+		summary: "Configuration de mon système et mon expérience avec Linux",
+		thumbnail: linux_gentoo,
+		clickable: true,
+		sections: [
+			{
+				type: 'carousel',
+				title: "Humble Beginnings",
+				image: linux_arch_vm,
+				content: "<p>J'ai commencé mon expérience en Mai 2025 avec <span>Arch</span>, un des plus populaires, connu pour son aspect <span>Do-It-Yourself</span>, où il n'y a presque rien de préinstallé. <br><br> J'ai essayé (et échoué plusieurs fois) dans une <span>machine virtuelle</span> avant d'aller l'installer sur un vrai ordinateur (bare metal) deux mois plus tard.</p>",
+				slides: [
+					{
+						image: linux_arch_vm_pacstrap,
+						caption: "Première tentative",
+					},
+					{
+						image: linux_arch_vm,
+						caption: "Linux dans une machine virtuelle",
+					},
+					{
+						image: linux_arch,
+						caption: "Arch sur bare metal",
+					},
+				],
+			},
+			{
+				type: 'modal',
+				title: "Gentoo",
+				image: linux_first,
+				content: "<p>Mon expérience avec Gentoo était très différente par rapport à celle de Arch. J'ai exploré des concepts comme <span>l'encryption</span>, et j'ai vécu l'expérience d'installer Linux sur un portable. <br><br> Gentoo vient avec son lot de défis qui nous en apprend beaucoup plus sur Linux, alors c'était une&nbsp;<span>expérience d'apprentissage</span> beaucoup plus satisfaisante.</p>",
+			},
+			{
+				type: 'carousel',
+				title: "ThinkPad",
+				content: "<p>J'ai acheté un <span>ThinkPad T480</span>. J'ai installé Gentoo dessus directement et maintenant je m'en sert pour quasiment tout. C'est devenu ma machine de travail que j'amène partout.</p>",
+				slides: [
+					{
+						// TODO: change image
+						image: linux_first,
+						caption: "Mon ThinkPad",
+					},
+					{
+						image: thinkpad_2,
+						caption: "Énorme mise à jour (j'ai trop attendu)",
+					},
+					{
+						image: thinkpad_1,
+						caption: "Moi sur mon ThinkPad au Webjam",
+					},
+				],
+			},
+		]
 	},
 ]
