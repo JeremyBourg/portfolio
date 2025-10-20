@@ -1,7 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 
-let { isOpen, src, video, thumb, speed } = $props();
+let { isOpen, src, video, thumb, speed, position } = $props();
 
 let dialog = $state();
 
@@ -19,7 +19,7 @@ $effect(() => {
 
 <!-- TODO: if video: add play button and remove img#click -->
 <div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;" data-speed={speed ?? ''}>
-	<img id="img" src="{src}" alt="">
+	<img id="img" src="{src}" alt="" style="object-position: {position ?? "top left"};">
 	<img id="click" src="{click}" alt="">
 </div>
 
@@ -86,7 +86,6 @@ div {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: top left;
 	}
 
 	#modal-container::before {
