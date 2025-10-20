@@ -17,6 +17,7 @@ $effect(() => {
 });
 </script>
 
+<!-- TODO: if video: add play button and remove img#click -->
 <div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;">
 	<img id="img" src="{src}" alt="">
 	<img id="click" src="{click}" alt="">
