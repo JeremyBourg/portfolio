@@ -12,6 +12,21 @@ h1 {
   }
 }
 
+@media screen {
+  a.external {
+    padding-right: 1em;
+    background-size: calc(1em - 8px);
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: var(--color-secondary);
+    background-image: url("$lib/assets/external-link.svg");
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 #info-content {
   max-width: 80%;
   display: flex;
