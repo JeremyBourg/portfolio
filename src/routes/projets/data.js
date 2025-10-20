@@ -24,6 +24,7 @@ import thinkpad_2 from '$lib/assets/thinkpad_2.jpg'
 // TODO: Add HTML content to posts
 
 export const posts = [
+
 	{
 		slug: 'portfolio',
 		title: 'Portfolio personnel',
@@ -80,6 +81,7 @@ export const posts = [
 			},
 		],
 	},
+
 	{
 		slug: 'bsc',
 		title: 'Baie-Sainte-Catherine',
@@ -119,6 +121,7 @@ export const posts = [
 			},
 		],
 	},
+
 	{
 		slug: 'smog',
 		title: 'Bataille contre le smog',
@@ -129,6 +132,7 @@ export const posts = [
 		summary: "Conception d’un jeu de ramassage de déchets avec des ennemis et des obstacles.",
 		thumbnail: bscImage,
 	},
+
 	{
 		slug: 'tek-it',
 		title: 'Tek It',
@@ -139,6 +143,7 @@ export const posts = [
 		summary: "Vidéo d’animation des paroles d’une chanson sous format de typographie cynétique.",
 		thumbnail: bscImage,
 	},
+
 	{
 		slug: 'gentoo-linux',
 		title: 'Gentoo Linux',
@@ -198,4 +203,5 @@ export const posts = [
 			},
 		]
 	},
+
 ]
