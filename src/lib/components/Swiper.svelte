@@ -15,15 +15,17 @@ onMount(() => {
 	const swiper = new Swiper('.swiper', {
 		modules: [Navigation, Pagination],
 
-		loop: loop,
+		loop: true,
 		
 		spaceBetween: 20,
 		breakpoints: {
 			1024: {
 				slidesPerView: 3,
+				loop: loop,
 			},
 			768: {
 				slidesPerView: 2,
+				loop: loop,
 			},
 		},
 		navigation: {
