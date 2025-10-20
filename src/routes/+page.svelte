@@ -22,7 +22,7 @@ import Term from '$lib/components/Term.svelte';
 			<br>
 			<p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
 			<br>
-			<p>J'apprend présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
+			<p>J'apprends présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
 		</div>
 
 		<blockquote data-speed="0.8"><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
@@ -33,7 +33,7 @@ import Term from '$lib/components/Term.svelte';
 			<br>
 			<ul>
 				<li><span>Programmation</span>, logiciels, securité et réseautique</li>
-				<li>Appriéciateur du <span>libre et open-source</span></li>
+				<li>Appréciateur du <span>libre et open-source</span></li>
 			</ul>
 			<br>
 			<ul>
