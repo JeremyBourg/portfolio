@@ -40,7 +40,7 @@ onMount(() => {
 		{#each slides as slide}
 			<div class="swiper-slide">
 				<div class="slide-img">
-					<Modal src={slide.image} />
+					<Modal src={slide.image} video={slide.video} />
 				</div>
 				<p>{slide.caption}</p>
 			</div>

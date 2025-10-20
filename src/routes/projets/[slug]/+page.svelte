@@ -28,7 +28,7 @@ let { data } = $props();
 			<section>
 				<h2>{section.title}</h2>
 				<div class="modal">
-					<Modal src={section.image} />
+					<Modal src={section.image} video={section.video} />
 					<div>
 						{@html section.content}
 					</div>

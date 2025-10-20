@@ -1,7 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 
-let { isOpen, src } = $props();
+let { isOpen, src, video } = $props();
 
 let dialog = $state();
 
@@ -20,7 +20,12 @@ $effect(() => {
 	onclose={() => { isOpen = false; }}
 	onclick={() => { dialog.close(); }}
 >
+
+{#if video}
+	<video src="{video}" controls loop autoplay muted></video>
+{:else}
 	<img src="{src}" alt="">
+{/if}
 </dialog>
 
 <!-- TODO: add close modal button as indication -->
@@ -36,10 +41,11 @@ dialog {
 	width: 75vw;
 }
 
-dialog img {
+dialog img, dialog video {
 	height: 100%;
 	min-width: 60%;
 	max-width: 100%;
+	outline: none;
 	object-fit: contain;
 	display: block;
 	margin: 0 auto;
