@@ -9,7 +9,8 @@ export function load() {
 			skills: post.skills,
 			subject: post.subject,
 			summary: post.summary,
-			sections: post.sections
+			sections: post.sections,
+			isVideo: post.video,
 		}))
 	}
 }

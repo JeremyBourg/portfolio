@@ -1,7 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 
-let { isOpen, src, video, thumb } = $props();
+let { isOpen, src, video, thumb, speed } = $props();
 
 let dialog = $state();
 
@@ -18,7 +18,7 @@ $effect(() => {
 </script>
 
 <!-- TODO: if video: add play button and remove img#click -->
-<div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;">
+<div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;" data-speed={speed ?? ''}>
 	<img id="img" src="{src}" alt="">
 	<img id="click" src="{click}" alt="">
 </div>
@@ -31,7 +31,7 @@ $effect(() => {
 
 {#if video}
 	<article id="video-container">
-		<video id="video" src="{video}" controls loop muted></video>
+		<video id="video" src="{video}" controls loop></video>
 	</article>
 {:else}
 	<img src="{src}" alt="">

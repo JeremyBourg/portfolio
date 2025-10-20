@@ -8,12 +8,18 @@ let {data} = $props();
 <div class="wrapper">
     <h1>Mes projets</h1>
     <div id="projects-grid">
-        {#each data.summaries as { slug, title, thumbnail, skills, subject, summary }, index}
+        {#each data.summaries as { slug, title, thumbnail, skills, subject, summary, isVideo }, index}
             <div class="project-card card-{index % 2 === 0 ? 'left' : 'right'}">
                 {#if index % 2 === 0}
-				<div class="img-container" data-speed="0.91">
-					<img src="{thumbnail}" alt="">
-				</div>
+					{#if isVideo}
+						<div class="img-container" data-speed="0.91">
+							<video src="{thumbnail}" autoplay muted loop></video>
+						</div>
+					{:else}
+						<div class="img-container" data-speed="0.91">
+							<img src="{thumbnail}" alt="">
+						</div>
+					{/if}
                 {/if}
                 <div class="project-info">
                     <h3>{subject}</h3>
@@ -23,9 +29,15 @@ let {data} = $props();
                     <p>{summary}</p>
                 </div>
                 {#if index % 2 !== 0}
-				<div class="img-container" data-speed="0.85">
-					<img src="{thumbnail}" alt="">
-				</div>
+					{#if isVideo}
+						<div class="img-container" data-speed="0.91">
+							<video src="{thumbnail}" autoplay muted loop></video>
+						</div>
+					{:else}
+						<div class="img-container" data-speed="0.91">
+							<img src="{thumbnail}" alt="">
+						</div>
+					{/if}
                 {/if}
                 <div class="button-container">
                     <CTA label={"En savoir plus"} href={"/projets/" + slug}/>
@@ -71,7 +83,7 @@ h1 {
 	}
 }
 
-img {
+img, video {
 	display: block;
 	object-fit: cover;
 	height: 100%;
@@ -100,10 +112,10 @@ img {
     transform: translateX(-7%);
 }
 
-.card-left img {
+.card-left img, .card-right video{
     transform: translateX(7%);
 }
-.card-right img {
+.card-right img, .card-right video {
     transform: translateX(-7%);
 }
 

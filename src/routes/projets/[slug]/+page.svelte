@@ -17,7 +17,9 @@ let { data } = $props();
 			<h3>{data.post.type}</h3>
 		</div>
 		{#if data.post.clickable}
-			<Modal thumb src={data.post.thumbnail} />
+			<Modal thumb src={data.post.thumbnail} speed="0.85" />
+		{:else if data.post.video}
+			<video src="{data.post.thumbnail}" autoplay loop muted data-speed="0.85"></video>
 		{:else}
 			<img src="{data.post.thumbnail}" alt="" data-speed="0.85">
 		{/if}
@@ -49,5 +51,17 @@ let { data } = $props();
 			<Swiper slides={section.slides} />
 		</section>
 		{/if}
+		{#if section.type === 'video'}
+		<section>
+			<h2>{section.title}</h2>
+			<video src="{section.video}" controls></video>
+		</section>
+		{/if}
 	{/each}
 </div>
+
+<style>
+video {
+	max-width: 100%;
+}
+</style>
