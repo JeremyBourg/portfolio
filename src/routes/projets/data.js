@@ -114,23 +114,19 @@ export const posts = [
 				content: "<p>Je suis allé prendre de l'inspiration en ligne avec des styles \
 				d'artistes que j'aime, entre autre \
 				<a class='external' \
-				rel='nofollow' \
 				href='https://youtube.com/stcubing' \
 				target='_blank'>\
 				stcubing</a> et \
 				<a class='external' \
-				rel='nofollow' \
 				href='https://www.youtube.com/channel/UCKjGF3701G3-IonrAq_e2JQ' \
 				target='_blank'>\
 				Pinckus</a>.<br><br>\
 				Voici les plus grandes inspirations, en haut à gauche, \
 				<a class='external' \
-				rel='nofollow' \
-				href='https://www.youtube.com/watch?v=8du36_qveds' \
+				href='https://www.youtube.com/watch?v=8Du36_QvEDs' \
 				target='_blank'>\
 				All My Friends par Pinckus</a>, en bas à gauche, \
 				<a class='external' \
-				rel='nofollow' \
 				href='https://www.youtube.com/watch?v=iKWUcsAjdYE' \
 				target='_blank'>\
 				Icarus par stcubing</a>.</p>",
