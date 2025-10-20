@@ -20,6 +20,14 @@ import linux_first from '$lib/assets/linux_first_gentoo.jpg';
 import thinkpad_1 from '$lib/assets/thinkpad_1.jpg';
 import thinkpad_2 from '$lib/assets/thinkpad_2.jpg';
 import tekit_insp from "$lib/assets/tekit_insp.png";
+import tekit from "$lib/assets/tekit.webm";
+import tekit_thumb_anim from "$lib/assets/tekit_thumb_anim.webm";
+import smog_thumb from "$lib/assets/smog_thumb.png";
+import smog_cs from "$lib/assets/smog_cs.png";
+import smog_editor from "$lib/assets/smog_editor.png";
+import smog_postproc from "$lib/assets/smog_postproc.png";
+import smog_props from "$lib/assets/smog_props.png";
+import smog_gameplay from "$lib/assets/smog_gameplay.webm";
 
 // TODO: Add HTML content to posts
 
@@ -101,11 +109,12 @@ export const posts = [
 		subject: 'Animation typographique',
 		skills: 'After Effects',
 		type: 'Projet scolaire',
-		description: "<p>Pour ce projet, il fallait réaliser une animation des paroles d'une chanson. \
+		description: "<p>Pour ce projet, il fallait réaliser une <span>animation</span> des paroles d'une chanson, j'ai choisi la chanson <span>Tek It</span> par Cafuné. \
 		<br><br>J'ai eu beaucoup de plaisir à faire ce travail et j'ai beaucoup appris sur \
 		<span>After Effects</span> et les <span>principes d'animation</span>.</p>",
 		summary: "Vidéo d’animation des paroles d’une chanson sous format de typographie cynétique.",
-		thumbnail: bscImage,
+		video: true,
+		thumbnail: tekit_thumb_anim,
 		sections: [
 			{
 				type: "modal",
@@ -131,6 +140,20 @@ export const posts = [
 				target='_blank'>\
 				Icarus par stcubing</a>.<br><br>\
 				À droite c'est moi.</p>",
+			},
+			{
+				type: "modal",
+				title: "Réalisation",
+				// TODO: change image for after effects screenshot
+				image: bscImage,
+				content: "<p>J'ai utilisé <span>After Effects</span> pour ce projet. <br><br>\
+				J'ai essayé beaucoup d'effets différents et j'ai simplement \
+				mis une <span>panoplie d'idées</span> et de concepts dans le projet, et ça a créé un résultat dont je suis fier.</p>"
+			},
+			{
+				type: "video",
+				title: "Vidéo",
+				video: tekit,
 			}
 		]
 	},
@@ -190,9 +213,51 @@ export const posts = [
 		subject: 'Conception de jeu',
 		skills: 'C#, Unity',
 		type: 'Projet scolaire',
-		description: "<p>Baie-Sainte-Catherine est une refonte du site d’une municipalité. J’ai fait le design du site avec <span>Figma</span> et l’intégration statique de la page d’accueil et de contact en <span>HTML</span>, <span>SCSS</span> et <span>JavaScript</span>.</p>",
+		description: "<p> Un jeu en <span>première personne</span> où il faut ramasser des déchets en évitant \
+		des ennemis et des obstacles. J'ai appris comment travailler avec l'<span>IA</span> \
+		dans un jeu et la gestion de points et de temps.</p>",
 		summary: "Conception d’un jeu de ramassage de déchets avec des ennemis et des obstacles.",
-		thumbnail: bscImage,
+		thumbnail: smog_thumb,
+		sections: [
+			{
+				type: "carousel",
+				title: "Conception",
+				content: "<p>Je suis allé avec un style très <span>simple</span> et <i>low-poly</i>. J'aimais vraiment l'idée de rajouter une route, car je \
+				trouvais que c'était une manière <span>organique</span> de rajouter des obstacles. <br><br>\
+				J'ai aussi opté de mettre des <span>particules</span> dans le ciel pour simuler \
+				du smog.</p>",
+				slides: [
+					{
+						image: smog_editor,
+						caption: "Création du terrain",
+						position: "center",
+					},
+					{
+						image: smog_props,
+						caption: "Ajout des assets",
+						position: "center",
+					},
+					{
+						image: smog_postproc,
+						caption: "Post-Processing",
+						position: "center",
+					},
+				]
+			},
+			{
+				type: "modal",
+				title: "Programmation",
+				image: smog_cs,
+				content: "<p>J'ai appris des nouveaux concepts de <span>Unity</span> et \
+				<span>C#</span>, notamment l'IA (à droite). <br><br>\
+				J'ai aussi travaillé avec les <span>GameEvents</span> et les <span>coroutines</span>.</p>",
+			},
+			{
+				type: "video",
+				title: "Vidéo du jeu",
+				video: smog_gameplay,
+			},
+		]
 	},
 
 	{
