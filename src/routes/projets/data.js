@@ -3,7 +3,15 @@ import bscDesign from '$lib/assets/bsc_design.png'
 import bscCmpHeader from '$lib/assets/bscCmpHeader.png'
 import bscCmpScrolly from '$lib/assets/bscCmpScrolly.png'
 import bscCmpYoutube from '$lib/assets/bscCmpYoutube.png'
+import pf_cmp_cursor from '$lib/assets/pf_cmp_cursor.png'
+import pf_layout from '$lib/assets/pf_layout.png'
+import pf_cmp_term_1 from '$lib/assets/pf_cmp_term_1.png'
+import pf_cmp_swiper from '$lib/assets/pf_cmp_swiper.png'
+import pf_cmp_term_2 from '$lib/assets/pf_cmp_term_2.png'
+import pf_dynamic from '$lib/assets/pf_dynamic.png'
 import portfolioThumbnail from '$lib/assets/portfolio-thumbnail.png'
+import pf_terminal from '$lib/assets/pf_terminal.webp'
+import pf_term_video from '$lib/assets/terminal.webm'
 
 // TODO: Add HTML content to posts
 
@@ -14,9 +22,55 @@ export const posts = [
 		subject: 'Design et intégration web',
 		skills: 'SvelteKit, Vite, Sass',
 		type: 'Projet scolaire*',
-		description: "<p>Ce portfolio est un projet scolaire, mais l'apprentissage de <span>SvelteKit</span> et <span>Vite</span> est une décision que j'ai prise pour élargir mes horizons au-delà du cadre du cours.</p>",
+		description: "<p>Ce portfolio est un projet scolaire, mais l'apprentissage de <span>SvelteKit</span> et <span>Vite</span> est une décision que j'ai prise pour élargir mes horizons au-delà du cadre du cours. <br><br> J'ai eu beaucoup de plaisir avec <span>Svelte</span>, c'est un framework agréable avec beaucoup de fonctionnalités qui rendent le développement web beaucoup plus plaisant.</p>",
 		summary: "Le portfolio que vous êtes en train de regarder.",
 		thumbnail: portfolioThumbnail,
+
+		sections: [
+			{
+				type: 'carousel',
+				title: "Pourquoi Svelte?",
+				content: "<p>Le routage de <span>SvelteKit</span> permet de faire du contenu dynamique qui apparait sur plusieurs pages sans répéter de code.<br><br> La <span>réactivité</span> permet d'avoir du contenu HTML dynamique et réactif (comme dans le terminal ou le curseur). <br><br> Les <span>styles CSS isolés</span> permettent aussi de faire du HTML plus simple.</p>",
+				slides: [
+					{
+						image: pf_layout,
+						caption: "Propriétés à travers tout le site",
+					},
+					{
+						image: pf_cmp_swiper,
+						caption: "Carousel dynamique",
+					},
+					{
+						image: pf_cmp_cursor,
+						caption: "Curseur réactif",
+					},
+					{
+						image: pf_dynamic,
+						caption: "Contenu dynamique",
+					},
+				]
+			},
+			{
+				type: "carousel",
+				title: "Terminal",
+				content: "<p>C'est un terminal simple et fonctionnel, que j'ai eu beaucoup de plaisir à faire. Si vous connaissez un peu de Linux, il y a un <i>easter egg</i> ;).</p>",
+				slides: [
+					{
+						image: pf_terminal,
+						video: pf_term_video,
+						caption: "Terminal",
+					},
+					{
+						image: pf_cmp_term_1,
+						caption: "Terminal",
+					},
+					{
+						image: pf_cmp_term_2,
+						caption: "Réactivité du terminal",
+					},
+				]
+			},
+		],
 	},
 	{
 		slug: 'bsc',
