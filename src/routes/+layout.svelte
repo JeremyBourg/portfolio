@@ -12,6 +12,23 @@
 
 	gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 	let { children } = $props();
+	let isMobile = $state(false);
+
+	function detectMobile() {
+		const toMatch = [
+			/Android/i,
+			/webOS/i,
+			/iPhone/i,
+			/iPad/i,
+			/iPod/i,
+			/BlackBerry/i,
+			/Windows Phone/i
+		];
+
+		return toMatch.some((toMatchItem) => {
+			return navigator.userAgent.match(toMatchItem);
+		});
+	}
 
 	$effect(() => {
 		const smoother = ScrollSmoother.create({
@@ -19,12 +36,15 @@
 			effects: true,
 			smoothTouch: 0.1,
 		});
+
 		if ($navigating === null && smoother) {
 			smoother.refresh();
 		}
 		else if (smoother) {
 			smoother.scrollTo(0);
 		}
+
+		isMobile = detectMobile();
 	});
 
 </script>
@@ -33,7 +53,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+
+{#if !isMobile}
 <Cursor />
+{/if}
 <Header />
 
 <div id="smooth-wrapper">
