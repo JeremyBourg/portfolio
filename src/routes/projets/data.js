@@ -147,8 +147,10 @@ export const posts = [
 				title: "Réalisation",
 				// TODO: change image for after effects screenshot
 				image: bscImage,
-				content: "<p>J'ai utilisé <span>After Effects</span> pour ce projet. <br><br>\
-				J'ai essayé beaucoup d'effets différents et j'ai simplement \
+				content: "<p>J'ai essayé de créer une <span>continuité</span> où-est-ce que \
+				les éléments se suivent d'une scène a l'autre, et que les changements de scène \
+				ne soient pas trop évidents. J'ai beaucoup misé sur les <span>transitions</span>.<br><br>\
+				J'ai simplement \
 				mis une <span>panoplie d'idées</span> et de concepts dans le projet, et ça a créé un résultat dont je suis fier.</p>"
 			},
 			{
