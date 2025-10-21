@@ -17,10 +17,16 @@ $effect(() => {
 });
 </script>
 
-<!-- TODO: if video: add play button and remove img#click -->
-<div id="{!thumb ? "modal-container" : ''}" onclick={() => isOpen = true} style="height: 100%;" data-speed={speed ?? ''}>
+<div id="{!thumb ? "modal-container" : 'thumb'}" onclick={() => isOpen = true} style="height: 100%;" data-speed={speed ?? ''}>
 	<img id="img" src="{src}" alt="" style="object-position: {position ?? "top left"};">
+	{#if video}
+	<div class="play-button">
+		<div class="play-circle">
+		</div>
+	</div>
+	{:else}
 	<img id="click" src="{click}" alt="">
+	{/if}
 </div>
 
 <dialog
@@ -30,9 +36,9 @@ $effect(() => {
 >
 
 {#if video}
-	<article id="video-container">
+	<div id="video-container">
 		<video id="video" src="{video}" controls loop></video>
-	</article>
+	</div>
 {:else}
 	<img src="{src}" alt="">
 {/if}
@@ -84,7 +90,7 @@ dialog::backdrop {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-div {
+div#modal-container, div#thumb {
 	position: relative;
 	cursor: pointer;
 	max-height: 50vh;
@@ -102,6 +108,40 @@ div {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+	}
+
+	.play-button {
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.play-circle {
+		background-color: var(--color-tertiary);
+		width: 30%;
+		aspect-ratio: 1 / 1;
+		border-radius: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 60%;
+			height: 60%;
+			background-color: var(--color-primary);
+			clip-path: polygon(0 0, 0 100%, 80% 50%);
+			transform: translate(-30%, -50%);
+		}
 	}
 }
 
