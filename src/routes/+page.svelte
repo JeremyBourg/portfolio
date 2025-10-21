@@ -9,44 +9,12 @@ import Term from '$lib/components/Term.svelte';
 <Parallax />
 
 <div class="wrapper">
-	<div class="first">
 		<div class="small">
 			<img src="{photo}" alt="">
 		</div>
 
-		<h1 data-speed="0.95">À propos</h1>
-
 		<div data-speed="0.85">
-			<h2 data-speed="1.05">Compétences et languages</h2>
-			<p>Je suis confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span> et <span>PHP</span>.</p>
-			<br>
-			<p>Je sais utiliser <span>Git</span>, <span>FTP</span>, et <span>Wordpress</span>.</p>
-			<br>
-			<p>J'apprends présentement dans mes temps libres d'autres technologies comme <span>Svelte</span>, Go et C</p>
-		</div>
-
-		<blockquote data-speed="0.8"><i>“Un idiot admire la complexité, un génie admire la simplicité”</i></blockquote>
-
-		<div>
-			<h2 data-speed="1.05">Intérêts</h2>
-			<p>En tant que <span>Mega Nerd™</span>, mes intérêts vont avec.</p>
-			<br>
-			<ul>
-				<li><span>Programmation</span>, logiciels, securité et réseautique</li>
-				<li>Appréciateur du <span>libre et open-source</span></li>
-			</ul>
-			<br>
-			<ul>
-				<li>Linguistique</li>
-				<li>Philosophie</li>
-				<li>Manga/anime</li>
-				<li>Jeux de puzzles</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="second">
-		<div data-speed="0.85">
+			<h1 data-speed="1.05">À propos</h1>
 			<h2 data-speed="1.05">Programmeur junior</h2>
 			<p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
 			<br>
@@ -59,7 +27,19 @@ import Term from '$lib/components/Term.svelte';
 			</div>
 		</div>
 
-		<div class="small">
+		<div>
+
+			<div data-speed="0.85">
+				<h2 data-speed="1.05">Compétences et languages</h2>
+				<p><span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span>, et <span>Svelte</span>.</p>
+				<br>
+				<p>En dehors de la programmation, j'ai des compétences en <span>montage vidéo</span> et en <span>animation 2D</span></p>
+				<br>
+				<p>Dans mes temps libres, j'apprends le <span>PHP</span>, Go, C et Bash</p>
+			</div>
+		</div>
+
+		<div class="small right">
 			<h2 data-speed="1.05">Qualités</h2>
 			<div id="qualities">
 				<div>
@@ -77,10 +57,27 @@ import Term from '$lib/components/Term.svelte';
 			</div>
 		</div>
 
-		<div class="small" data-speed="0.75">
+		<div>
+			<blockquote data-speed="0.9"><i>"Un idiot admire la complexité, un génie admire la simplicité"</i></blockquote>
+			<h2 data-speed="1.05">Intérêts</h2>
+			<p>En tant que <span>Mega Nerd™</span>, mes intérêts vont avec.</p>
+			<br>
+			<ul>
+				<li><span>Programmation</span>, logiciels, securité et réseautique</li>
+				<li>Appréciateur du <span>libre et open-source</span></li>
+			</ul>
+			<br>
+			<ul>
+				<li>Linguistique</li>
+				<li>Philosophie</li>
+				<li>Manga/anime</li>
+				<li>Jeux de puzzles</li>
+			</ul>
+		</div>
+
+		<div class="small right terminal-parent" data-speed="0.80">
 			<Term />
 		</div>
-	</div>
 </div>
 
 <div class="wrapper">
@@ -109,25 +106,18 @@ import Term from '$lib/components/Term.svelte';
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 20px;
-}
-
-.first, .second {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
 	gap: 100px;
 
-	& * {
-		grid-column: 1 / -1;
-	}
+	grid-row-gap: 12.5rem;
 
-	@media screen and (max-width: 1100px) {
+	@media screen and (max-width: 768px) {
 		grid-template-columns: 1fr;
+		grid-row-gap: 7.5rem;
 	}
 }
 
-h2:first-child {
-	margin-bottom: 24px;
+h2 {
+	margin-bottom: 1.5rem;
 }
 
 span {
@@ -137,25 +127,31 @@ span {
 blockquote {
 	font-family: var(--font-primary);
 	font-size: var(--font-size-quote);
-	margin: 50px 100px;
+	margin: 0 20% 20% 20%;
 	font-weight: 200;
 	letter-spacing: -5%;
 
-	@media screen and (max-width: 1100px) {
-		margin: 0;
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: 768px) {
+		margin: 5% 20%;
 	}
 }
 
 #qualities {
 	display: flex;
 	flex-direction: column;
-	gap: 64px;
+	gap: var(--font-size-h1);
 }
 #software {
 	margin: 100px 0;
 	grid-column: 2 / -1;
 	position: relative;
 
+	@media screen and (max-width: 768px) {
+		grid-column: unset;
+	}
 }
 
 #software #gentoo {
@@ -164,22 +160,23 @@ blockquote {
 	right: 67.5%;
 	bottom: -12.5%;
 	width: 100%;
-}
 
-.first .small {
-	grid-column: 1 / -2;
-
-	@media screen and (max-width: 1100px) {
-		grid-column: 1 / -1;
+	@media screen and (max-width: 768px) {
+		position: unset;
+		margin-top: 5rem;
 	}
 }
 
-.second .small {
-	grid-column: 2 / -1;
+.small {
+	width: 87%;
 
 	@media screen and (max-width: 1100px) {
-		grid-column: 1 / -1;
+		width: 100%;
 	}
+}
+
+.right {
+	margin-left: auto;
 }
 
 li {
@@ -192,4 +189,10 @@ li::before {
 	padding-inline-end: 1%;
 }
 
+
+.terminal-parent {
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
 </style>
