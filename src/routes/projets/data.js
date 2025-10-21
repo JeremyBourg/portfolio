@@ -280,9 +280,9 @@ export const posts = [
 
 	{
 		slug: 'gentoo-linux',
-		title: 'Gentoo GNU/Linux',
+		title: 'Gentoo Linux',
 		subject: 'Installation et configuration',
-		skills: 'Linux',
+		skills: 'GNU/Linux',
 		type: 'Projet personnel',
 		description: "<p>Dans mes temps libres, j'aime configurer <span>Linux</span> \
 		et des programmes sur mon système pour avoir un environnement qui \
