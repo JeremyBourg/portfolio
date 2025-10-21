@@ -22,7 +22,7 @@ import Term from '$lib/components/Term.svelte';
 			<br>
 			<p>Je vise à apprendre des technologies back-end, mais je suis aussi ouvert au front-end.</p>
 
-			<div style="margin-top: 100px;" data-speed="1.1">
+			<div style="margin-top: 6.125rem;" data-speed="1.1">
 				<CTA label={"Voir les projets"} href={"/projets"}/>
 			</div>
 		</div>
@@ -135,7 +135,8 @@ blockquote {
 	align-items: center;
 
 	@media screen and (max-width: 768px) {
-		margin: 5% 20%;
+		margin: 0;
+		margin-bottom: 20%;
 	}
 }
 
