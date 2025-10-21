@@ -120,6 +120,10 @@ import Term from '$lib/components/Term.svelte';
 	& * {
 		grid-column: 1 / -1;
 	}
+
+	@media screen and (max-width: 1100px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 h2:first-child {
@@ -136,6 +140,10 @@ blockquote {
 	margin: 50px 100px;
 	font-weight: 200;
 	letter-spacing: -5%;
+
+	@media screen and (max-width: 1100px) {
+		margin: 0;
+	}
 }
 
 #qualities {
@@ -147,6 +155,7 @@ blockquote {
 	margin: 100px 0;
 	grid-column: 2 / -1;
 	position: relative;
+
 }
 
 #software #gentoo {
@@ -158,11 +167,19 @@ blockquote {
 }
 
 .first .small {
-	grid-column: 1 / span 5;
+	grid-column: 1 / -2;
+
+	@media screen and (max-width: 1100px) {
+		grid-column: 1 / -1;
+	}
 }
 
 .second .small {
 	grid-column: 2 / -1;
+
+	@media screen and (max-width: 1100px) {
+		grid-column: 1 / -1;
+	}
 }
 
 li {
