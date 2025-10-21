@@ -13,6 +13,7 @@ import portfolioThumbnail from '$lib/assets/portfolio-thumbnail.webp';
 import pf_terminal from '$lib/assets/pf_terminal.webp';
 import pf_term_video from '$lib/assets/terminal.webm';
 import pf_backend from '$lib/assets/pf_backend.webp';
+import pf_more_posts from '$lib/assets/pf_more_posts.webp';
 import linux_arch from '$lib/assets/arch.webp';
 import linux_arch_vm from '$lib/assets/linux_arch_vm.webp';
 import linux_arch_vm_pacstrap from '$lib/assets/linux_arch_vm_pacstrap.webp';
@@ -112,6 +113,14 @@ export const posts = [
 				les <span>statements</span>. <br><br>\
 				J'ai choisi de mettre un peu de <span>server-side rendering</span> \
 				pour les messages d'erreurs ou de validation, parce que c'est plus flexible (et&nbsp;intéressant).</p>"
+			},
+			{
+				type: "modal",
+				image: pf_more_posts,
+				title: "Dynamisme",
+				content: "<p>Le carousel au bas de la page n'a évidemment <span>pas été fait manuellement</span>. \
+				Les projets du site sont tous <span>dynamiques</span>.<br><br> \
+				Il y a un même gabarit pour tous les projets, et les contenus sont insérés avec <span>Svelte</span>.</p>"
 			}
 		],
 	},

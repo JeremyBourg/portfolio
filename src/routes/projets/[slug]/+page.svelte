@@ -72,6 +72,7 @@ let { data } = $props();
 				<div class="swiper-slide">
 					<a href="/projets/{post.slug}">
 						{#if post.video}
+							<!-- hackiest of hacks to fix video grabbing cursor -->
 							<div style="position: absolute; inset: 0;" ontouchstart={event.stopPropagation()}></div>
 							<video src="{post.thumbnail}" autoplay muted loop></video>
 						{:else}
