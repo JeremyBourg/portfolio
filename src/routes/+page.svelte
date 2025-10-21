@@ -1,7 +1,7 @@
 <script>
 import Parallax from '$lib/components/Parallax.svelte';
-import photo from '$lib/assets/photo-jeremy.jpg';
-import gentoo from '$lib/assets/gentoo.jpg';
+import photo from '$lib/assets/photo-jeremy.webp';
+import gentoo from '$lib/assets/gentoo.webp';
 import CTA from '$lib/components/CTA.svelte';
 import Term from '$lib/components/Term.svelte';
 </script>

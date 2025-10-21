@@ -1,11 +1,11 @@
 <script>
-import parallax0 from '$lib/assets/parallax0.png'
-import parallax1 from '$lib/assets/parallax1.png'
-import parallax2 from '$lib/assets/parallax2.png'
-import parallax3 from '$lib/assets/parallax3.png'
-import parallax4 from '$lib/assets/parallax4.png'
-import parallax5 from '$lib/assets/parallax5.png'
-import name from '$lib/assets/parallax-name.png'
+import parallax0 from '$lib/assets/parallax0.webp'
+import parallax1 from '$lib/assets/parallax1.webp'
+import parallax2 from '$lib/assets/parallax2.webp'
+import parallax3 from '$lib/assets/parallax3.webp'
+import parallax4 from '$lib/assets/parallax4.webp'
+import parallax5 from '$lib/assets/parallax5.webp'
+import name from '$lib/assets/parallax-name.webp'
 
 const layers = [
 	parallax0,

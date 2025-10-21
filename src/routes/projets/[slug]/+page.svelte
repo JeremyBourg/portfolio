@@ -23,6 +23,7 @@ let { data } = $props();
 		{:else}
 			<img src="{data.post.thumbnail}" alt="" data-speed="0.90">
 		{/if}
+		<!-- TODO: add link to project -->
 	</section>
 	<section>
 		<h2>Description</h2>

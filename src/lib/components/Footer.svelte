@@ -1,6 +1,6 @@
 <script>
 import github from '$lib/assets/github-mark-white.svg';
-import linkedin from '$lib/assets/InBug-White.png';
+import linkedin from '$lib/assets/InBug-White.webp';
 </script>
 
 <footer>
