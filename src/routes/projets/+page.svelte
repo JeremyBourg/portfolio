@@ -71,6 +71,10 @@ h1 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	position: relative;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .project-info {
@@ -105,23 +109,44 @@ img, video {
 .card-left .img-container::before {
 	background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0));
     transform: translateX(7%);
+
+	@media screen and (max-width: 768px) {
+		transform: translateX(0%);
+	}
 }
 
 .card-right .img-container::before {
 	background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
     transform: translateX(-7%);
+
+	@media screen and (max-width: 768px) {
+		transform: translateX(0%);
+	}
 }
 
 .card-left img, .card-right video{
     transform: translateX(7%);
+
+	@media screen and (max-width: 768px) {
+		transform: translateX(0%);
+	}
 }
 .card-right img, .card-right video {
     transform: translateX(-7%);
+
+	@media screen and (max-width: 768px) {
+		transform: translateX(0%);
+	}
 }
 
 .card-left .project-info {
 	margin-left: -10%;
 	padding-right: 20%;
+	
+	@media screen and (max-width: 768px) {
+		margin-left: 0%;
+		padding-right: 0%;
+	}
 }
 .card-left .button-container {
 	position: absolute;
@@ -134,6 +159,11 @@ img, video {
 .card-right .project-info {
 	padding-left: 15%;
 	margin-right: -10%;
+
+	@media screen and (max-width: 768px) {
+		margin-right: 0%;
+		padding-left: 0%;
+	}
 }
 .card-right .button-container {
 	position: absolute;
@@ -141,6 +171,15 @@ img, video {
 	bottom: 0;
 	transform: translateY(50%);
 	z-index: 2;
+}
+
+.card-right .button-container, .card-left .button-container {
+	@media screen and (max-width: 480px){
+		position: unset;
+		right: unset;
+		bottom: unset;
+		transform: unset;
+	}
 }
 .separator {
 	height: 2px;

@@ -17,11 +17,11 @@ let { data } = $props();
 			<h3>{data.post.type}</h3>
 		</div>
 		{#if data.post.clickable}
-			<Modal thumb src={data.post.thumbnail} speed="0.85" />
+			<Modal thumb src={data.post.thumbnail} speed="0.90" />
 		{:else if data.post.video}
-			<video src="{data.post.thumbnail}" autoplay loop muted data-speed="0.85"></video>
+			<video src="{data.post.thumbnail}" autoplay loop muted data-speed="0.90"></video>
 		{:else}
-			<img src="{data.post.thumbnail}" alt="" data-speed="0.85">
+			<img src="{data.post.thumbnail}" alt="" data-speed="0.90">
 		{/if}
 	</section>
 	<section>
