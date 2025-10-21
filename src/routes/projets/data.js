@@ -38,7 +38,9 @@ export const posts = [
 		subject: 'Design et intégration web',
 		skills: 'SvelteKit, Vite, Sass',
 		type: 'Projet scolaire*',
-		description: "<p>Ce portfolio est un projet scolaire, mais l'apprentissage de \
+		description: "<p>J'ai fait ce portfolio non seulement dans le but de montrer \
+		mes compétences, mais aussi mon <span>amour de la programmation</span>.<br><br>\
+		Ce portfolio est un projet scolaire, mais l'apprentissage de \
 		<span>SvelteKit</span> et <span>Vite</span> \
 		est une décision que j'ai prise pour élargir mes horizons au-delà du cadre du cours. \
 		<br><br> J'ai eu beaucoup de plaisir avec \
