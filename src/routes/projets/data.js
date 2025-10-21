@@ -12,6 +12,7 @@ import pf_dynamic from '$lib/assets/pf_dynamic.webp';
 import portfolioThumbnail from '$lib/assets/portfolio-thumbnail.webp';
 import pf_terminal from '$lib/assets/pf_terminal.webp';
 import pf_term_video from '$lib/assets/terminal.webm';
+import pf_backend from '$lib/assets/pf_backend.webp';
 import linux_arch from '$lib/assets/arch.webp';
 import linux_arch_vm from '$lib/assets/linux_arch_vm.webp';
 import linux_arch_vm_pacstrap from '$lib/assets/linux_arch_vm_pacstrap.webp';
@@ -101,6 +102,16 @@ export const posts = [
 					},
 				]
 			},
+			{
+				type: "modal",
+				title: "Back-end",
+				image: pf_backend,
+				content: "<p>Le backend pour ce site est très simple, puisqu'il y a juste un formulaire. \
+				Mais j'ai tout de même appris les bases du <span>PHP</span> et <span>MySQL</span>.<br><br>\
+				J'ai utilisé du <span>JavaScript</span> pour communiquer avec le formulaire \
+				pour pouvoir entre autre retourner \
+				le résultat si le serveur ne répond pas, par exemple.</p>"
+			}
 		],
 	},
 
@@ -265,7 +276,7 @@ export const posts = [
 
 	{
 		slug: 'gentoo-linux',
-		title: 'Gentoo Linux',
+		title: 'Gentoo GNU/Linux',
 		subject: 'Installation et configuration',
 		skills: 'Linux',
 		type: 'Projet personnel',
@@ -274,7 +285,7 @@ export const posts = [
 		<span>répond à mes besoins</span> et qui me rend plus <span>confortable</span>, \
 		parce que je crois que le confort est vital à la productivité. <br><br> \
 		Cette page sert aussi de documentation de mon parcours.</p>",
-		summary: "Configuration de mon système et mon expérience avec Linux",
+		summary: "Configuration de mon système et mon expérience avec GNU/Linux",
 		thumbnail: linux_gentoo,
 		clickable: true,
 		sections: [
