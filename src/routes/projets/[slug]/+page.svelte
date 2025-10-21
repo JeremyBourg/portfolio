@@ -1,6 +1,7 @@
 <script>
 import click from "$lib/assets/modal-icon.svg";
 import Modal from '$lib/components/Modal.svelte';
+import CTA from '$lib/components/CTA.svelte';
 import Swiper from "$lib/components/Swiper.svelte";
 import './style.scss';
 
@@ -23,7 +24,11 @@ let { data } = $props();
 		{:else}
 			<img src="{data.post.thumbnail}" alt="" data-speed="0.90">
 		{/if}
-		<!-- TODO: add link to project -->
+		{#if data.post.href}
+		<div class="button-container">
+			<CTA href={data.post.href} label={data.post.label ?? "Voir le projet"} />
+		</div>
+		{/if}
 	</section>
 	<section>
 		<h2>Description</h2>
@@ -65,4 +70,16 @@ let { data } = $props();
 video {
 	max-width: 100%;
 }
+.button-container {
+	position: absolute;
+	left: 45%;
+	top: 90%;
+    z-index: 3;
+
+    @media screen and (max-width: 600px){
+      position: unset;
+      margin: 0 auto;
+    }
+}
+
 </style>

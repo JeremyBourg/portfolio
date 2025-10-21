@@ -49,6 +49,8 @@ export const posts = [
 		c'est un framework agréable avec beaucoup de fonctionnalités \
 		qui rendent le développement web beaucoup plus plaisant.</p>",
 		summary: "Le portfolio que vous êtes en train de regarder.",
+		href: "https://github.com/JeremyBourg/portfolio",
+		label: "Voir sur GitHub",
 		thumbnail: portfolioThumbnail,
 
 		sections: [
@@ -183,6 +185,8 @@ export const posts = [
 		<span>JavaScript</span>.</p>",
 		summary: "Refonte du site d’une municipalité. Conçu de A à Z du design jusqu’à l’intégration.",
 		thumbnail: bscImage,
+		href: "https://jbourg.dectim.ca/baie-sainte-catherine/",
+		label: "Voir le site en ligne",
 		clickable: true,
 		sections: [
 			{
@@ -231,6 +235,7 @@ export const posts = [
 		dans un jeu et la gestion de points et de temps.</p>",
 		summary: "Conception d’un jeu de ramassage de déchets avec des ennemis et des obstacles.",
 		thumbnail: smog_thumb,
+		href: "https://github.com/JeremyBourg/smogfight",
 		sections: [
 			{
 				type: "carousel",
