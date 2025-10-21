@@ -6,6 +6,7 @@ import parallax3 from '$lib/assets/parallax3.webp'
 import parallax4 from '$lib/assets/parallax4.webp'
 import parallax5 from '$lib/assets/parallax5.webp'
 import name from '$lib/assets/parallax-name.webp'
+import parallax_static from '$lib/assets/parallax-v2.jpg'
 
 const layers = [
 	parallax0,
@@ -33,10 +34,18 @@ let top = $state();
     <img class="parallax-name" src="{name}" alt="">
 </div>
 
+<div id="no-parallax">
+	<img src="{parallax_static}" alt="">
+</div>
+
 <style>
 #parallax {
-    height: 130vh;
+    height: 120vh;
 	position: relative;
+
+	@media screen and (max-width: 1100px) {
+		height: 100vh;
+	}
 }
 #fill {
     z-index: -5;
@@ -54,5 +63,25 @@ img {
 .parallax-name {
     z-index: -10;
     top: 16vh;
+}
+
+#no-parallax {
+	display: none;
+	height: 100vh;
+	position: relative;
+
+	img {
+		object-fit: cover;
+		object-position: 54%;
+	}
+}
+@media screen and (max-width: 768px) {
+	#parallax {
+		display: none;
+	}
+
+	#no-parallax {
+		display: block;
+	}
 }
 </style>
