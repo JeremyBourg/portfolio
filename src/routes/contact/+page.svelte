@@ -109,6 +109,7 @@ const reset = () => {
         </div>
         <div>
             <p>CV:</p>
+			<!-- TODO: real cv -->
             <a href="#" download>Télécharger (PDF)</a>
         </div>
     </div>
@@ -164,6 +165,10 @@ fieldset {
     padding: 0;
     margin: 0;
 
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
     input, textarea {
         padding: 16px;
 		width: 100%;
@@ -192,6 +197,12 @@ fieldset {
 .info {
     display: flex;
     justify-content: space-between;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+	}
 }
 
 #submit {
