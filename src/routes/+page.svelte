@@ -31,11 +31,11 @@ import Term from '$lib/components/Term.svelte';
 
 			<div data-speed="0.85">
 				<h2 data-speed="1.05">Compétences et languages</h2>
-				<p><span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span>, et <span>Svelte</span>.</p>
+				<p>Confortable en <span>HTML</span>, (S)<span>CSS</span>, <span>JavaScript</span>, et <span>Svelte</span>/<span>SvelteKit</span>.</p>
+				<br>
+				<p>Intermédiaire en <span>PHP</span>, <span>C</span>, <span>C#</span>, <span>Python</span>, et&nbsp;<span>Bash</span>.</p>
 				<br>
 				<p>En dehors de la programmation, j'ai des compétences en <span>montage vidéo</span> et en <span>motion design</span>.</p>
-				<br>
-				<p>Dans mes temps libres, j'apprends le <span>PHP</span>, Go, C et Bash</p>
 			</div>
 		</div>
 
