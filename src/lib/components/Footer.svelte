@@ -28,7 +28,7 @@ import linkedin from '$lib/assets/InBug-White.webp';
 
 <style>
 footer {
-	margin-top: 100px;
+	margin-top: 10vh;
 	padding: 50px;
 }
 
