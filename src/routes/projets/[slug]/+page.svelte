@@ -26,7 +26,7 @@ let { data } = $props();
 		{/if}
 		{#if data.post.href}
 		<div class="button-container">
-			<CTA href={data.post.href} label={data.post.label ?? "Voir le projet"} />
+			<CTA href={data.post.href} label={data.post.label ?? "Voir le projet"} extern />
 		</div>
 		{/if}
 	</section>

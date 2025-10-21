@@ -1,8 +1,8 @@
 <script>
-let { label, href } = $props();
+let { label, href, extern } = $props();
 </script>
 
-<a href="{href}">
+<a href="{href}" target={extern ? "_blank" : ''}>
 	<p>{label}</p>
 </a>
 
