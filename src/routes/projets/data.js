@@ -24,6 +24,7 @@ import thinkpad_2 from '$lib/assets/thinkpad_2.webp';
 import thinkpad_3 from '$lib/assets/thinkpad_3.webp';
 import tekit_insp from "$lib/assets/tekit_insp.webp";
 import tekit from "$lib/assets/tekit.webm";
+import tekit_ae from "$lib/assets/tekit_ae.webp";
 import tekit_thumb_anim from "$lib/assets/tekit_thumb_anim.webm";
 import smog_thumb from "$lib/assets/smog_thumb.webp";
 import smog_cs from "$lib/assets/smog_cs.webp";
@@ -166,8 +167,7 @@ export const posts = [
 			{
 				type: "modal",
 				title: "Réalisation",
-				// TODO: change image for after effects screenshot
-				image: bscImage,
+				image: tekit_ae,
 				content: "<p>J'ai essayé de créer une <span>continuité</span> où-est-ce que \
 				les éléments se suivent d'une scène a l'autre, et que les changements de scène \
 				ne soient pas trop évidents. J'ai beaucoup misé sur les <span>transitions</span>.<br><br>\
