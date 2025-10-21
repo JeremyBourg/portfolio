@@ -64,6 +64,27 @@ let { data } = $props();
 		</section>
 		{/if}
 	{/each}
+
+	<section>
+		<h2>D'autres projets</h2>
+		<Swiper loop>
+			{#each data.others as post}
+				<div class="swiper-slide">
+					<a href="/projets/{post.slug}">
+						{#if post.video}
+							<div style="position: absolute; inset: 0;" ontouchstart={event.stopPropagation()}></div>
+							<video src="{post.thumbnail}" autoplay muted loop></video>
+						{:else}
+							<img src="{post.thumbnail}" alt="">
+						{/if}
+						<div>
+							<h3>{post.title}</h3>
+						</div>
+					</a>
+				</div>
+			{/each}
+		</Swiper>
+	</section>
 </div>
 
 <style>
@@ -80,6 +101,30 @@ video {
       position: unset;
       margin: 0 auto;
     }
+}
+
+.swiper-slide::before {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-slide {
+	video, img {
+		display: block;
+	}
+
+	div {
+		position: absolute;
+		bottom: 0;
+		padding: 1rem;
+
+		h3 {
+			color: var(--color-primary);
+		}
+	}
 }
 
 </style>

@@ -5,7 +5,7 @@ import Modal from './Modal.svelte';
 import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
 
-let { loop, slides } = $props();
+let { loop, slides, children } = $props();
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -39,6 +39,7 @@ onMount(() => {
 
 <div class="swiper">
 	<div class="swiper-wrapper">
+	{#if slides}
 		{#each slides as slide}
 			<div class="swiper-slide">
 				<div class="slide-img">
@@ -47,6 +48,9 @@ onMount(() => {
 				<p>{slide.caption}</p>
 			</div>
 		{/each}
+	{:else}
+		{@render children?.()}
+	{/if}
 	</div>
 
 	<div class="swiper-button-prev"></div>
