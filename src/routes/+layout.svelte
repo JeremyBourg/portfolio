@@ -12,23 +12,6 @@
 
 	gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 	let { children } = $props();
-	let isMobile = $state(false);
-
-	function detectMobile() {
-		const toMatch = [
-			/Android/i,
-			/webOS/i,
-			/iPhone/i,
-			/iPad/i,
-			/iPod/i,
-			/BlackBerry/i,
-			/Windows Phone/i
-		];
-
-		return toMatch.some((toMatchItem) => {
-			return navigator.userAgent.match(toMatchItem);
-		});
-	}
 
 	$effect(() => {
 		const smoother = ScrollSmoother.create({
@@ -43,8 +26,6 @@
 		else if (smoother) {
 			smoother.scrollTo(0);
 		}
-
-		isMobile = detectMobile();
 	});
 
 </script>
@@ -54,9 +35,7 @@
 </svelte:head>
 
 
-{#if !isMobile}
 <Cursor />
-{/if}
 <Header />
 
 <div id="smooth-wrapper">

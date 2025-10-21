@@ -35,6 +35,10 @@ svg {
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 9999;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
 }
 
 circle {
