@@ -19,6 +19,7 @@ import linux_gentoo from '$lib/assets/linux_gentoo.png';
 import linux_first from '$lib/assets/linux_first_gentoo.jpg';
 import thinkpad_1 from '$lib/assets/thinkpad_1.jpg';
 import thinkpad_2 from '$lib/assets/thinkpad_2.jpg';
+import thinkpad_3 from '$lib/assets/thinkpad_3.jpg';
 import tekit_insp from "$lib/assets/tekit_insp.png";
 import tekit from "$lib/assets/tekit.webm";
 import tekit_thumb_anim from "$lib/assets/tekit_thumb_anim.webm";
@@ -318,8 +319,8 @@ export const posts = [
 				C'est devenu ma machine de travail que j'amène partout.</p>",
 				slides: [
 					{
-						// TODO: change image
-						image: linux_first,
+						image: thinkpad_3,
+						position: "center",
 						caption: "Mon ThinkPad",
 					},
 					{
