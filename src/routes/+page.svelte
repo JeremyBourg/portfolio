@@ -16,7 +16,7 @@ import Term from '$lib/components/Term.svelte';
 		<div data-speed="0.85">
 			<h1 data-speed="1.05">À propos</h1>
 			<h2 data-speed="1.05">Programmeur junior</h2>
-			<p>Salut! Moi c’est <span>Jérémy Bourg.</span></p>
+			<p>Salut! Moi, c’est <span>Jérémy Bourg.</span></p>
 			<br>
 			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
 			<br>

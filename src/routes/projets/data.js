@@ -140,7 +140,7 @@ export const posts = [
 				href='https://www.youtube.com/watch?v=iKWUcsAjdYE' \
 				target='_blank'>\
 				Icarus par stcubing</a>.<br><br>\
-				À droite c'est moi.</p>",
+				À droite, c'est mon animation.</p>",
 			},
 			{
 				type: "modal",
