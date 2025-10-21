@@ -76,6 +76,14 @@ dialog img {
 dialog::backdrop {
 	background: rgba(0, 0, 0, 0.6);
 }
+#modal-container::before {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
 div {
 	position: relative;
 	cursor: pointer;
@@ -88,13 +96,6 @@ div {
 		object-fit: cover;
 	}
 
-	#modal-container::before {
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		inset: 0;
-		background-color: rgba(0, 0, 0, 0.3);
-	}
 
 	img#click {
 		display: block;
