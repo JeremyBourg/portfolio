@@ -6,7 +6,7 @@ import parallax3 from '$lib/assets/parallax3.webp'
 import parallax4 from '$lib/assets/parallax4.webp'
 import parallax5 from '$lib/assets/parallax5.webp'
 import name from '$lib/assets/parallax-name.webp'
-import parallax_static from '$lib/assets/parallax-v2.jpg'
+import parallax_static from '$lib/assets/parallax-static.webp'
 
 const layers = [
 	parallax0,
