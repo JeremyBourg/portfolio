@@ -30,8 +30,6 @@ import smog_postproc from "$lib/assets/smog_postproc.png";
 import smog_props from "$lib/assets/smog_props.png";
 import smog_gameplay from "$lib/assets/smog_gameplay.webm";
 
-// TODO: Add HTML content to posts
-
 export const posts = [
 
 	{
