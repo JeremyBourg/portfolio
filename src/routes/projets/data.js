@@ -106,11 +106,10 @@ export const posts = [
 				type: "modal",
 				title: "Back-end",
 				image: pf_backend,
-				content: "<p>Le backend pour ce site est très simple, puisqu'il y a juste un formulaire. \
-				Mais j'ai tout de même appris les bases du <span>PHP</span> et <span>MySQL</span>.<br><br>\
-				J'ai utilisé du <span>JavaScript</span> pour communiquer avec le formulaire \
-				pour pouvoir entre autre retourner \
-				le résultat si le serveur ne répond pas, par exemple.</p>"
+				content: "<p>J'ai appris des concepts de <span>SQL</span> comme les <span>paramètres</span> et \
+				les <span>statements</span>. <br><br>\
+				J'ai choisi de mettre un peu de <span>server-side rendering</span> \
+				pour les messages d'erreurs ou de validation, parce que c'est plus flexible (et&nbsp;intéressant).</p>"
 			}
 		],
 	},
