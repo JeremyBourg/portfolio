@@ -82,9 +82,9 @@ const reset = () => {
 				></textarea>
 			</div>
         </fieldset>
-        <div id="submit">
-            <button>Soumettre</button>
-        </div>
+        <button id="submit">
+            <p>Soumettre</p>
+        </button>
     </form>
 {:else}
 <section class="response">
@@ -212,6 +212,7 @@ fieldset {
     border: 4px solid var(--color-secondary);
     overflow: hidden;
     display: inline-block;
+	background-color: transparent;
 
     & > * {
         cursor: pointer;
