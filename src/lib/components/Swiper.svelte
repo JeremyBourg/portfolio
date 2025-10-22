@@ -11,8 +11,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+let uuid = crypto.randomUUID();
+const classUUID = 's-' + uuid;
+
 onMount(() => {
-	const swiper = new Swiper('.swiper', {
+	let swiper = new Swiper(`.${classUUID}`, {
 		modules: [Navigation, Pagination],
 
 		loop: true,
@@ -32,12 +35,12 @@ onMount(() => {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		}
-	})
+	});
 })
 
 </script>
 
-<div class="swiper">
+<div class="{classUUID} swiper" >
 	<div class="swiper-wrapper">
 	{#if slides}
 		{#each slides as slide}
