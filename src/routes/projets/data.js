@@ -245,6 +245,7 @@ export const posts = [
 		summary: "Conception d’un jeu de ramassage de déchets avec des ennemis et des obstacles.",
 		thumbnail: smog_thumb,
 		href: "https://github.com/JeremyBourg/smogfight",
+		label: "Voir sur GitHub",
 		sections: [
 			{
 				type: "carousel",
