@@ -35,18 +35,15 @@ Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes sp�
 
 ## License
 
-Ce portfolio vient avec une double license:
+Ce portfolio est distribué sous un régime de double licence :
 
-Le **Code Source** est licensé sous [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
+- Le **Code Source** est sous licence [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
+- Le **Contenu** (défini ci-dessous) demeure ma propriété exclusive, avec tous droits réservés © 2025 Jérémy Bourg.
 
-Le **Contenu** (défini ci-dessous) m'appartient avec tous droits réservés © 2025 Jérémy Bourg
+Le **Contenu** de ce site, y compris, sans s’y limiter, mon nom, ma photographie, mes informations personnelles, les descriptions de projets et les projets eux-mêmes, n’est **pas** couvert par la GNU General Public License et reste la propriété de leur(s) auteur(s) respectif(s) (généralement moi).
 
----
-Le **Contenu** de ce site, y compris, mais sans se limiter à, mon nom, ma photographie, mon information personnelle, les contenus de mes projets et les projets eux-mêmes ne sont **pas** couvert par la GNU General Public License et reste la propriété de leur auteur respectif (généralement moi).
+Le **Contenu** comprend notamment, mais sans s’y limiter, l’intégralité du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
 
-Le **Contenu** comprend, mais ne se limite pas à, l'entièreté du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
+Vous êtes libre de réutiliser, modifier et redistribuer le **Code Source** conformément aux termes de la [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) telle que publiée par la Free Software Foundation, version 3 ou ultérieure.
 
----
-Si vous voulez réutiliser le **Code Source**, vous êtes libre de le faire sous la [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html).
-
-Si vous voulez réutiliser le **Contenu**, ou en cas de doute sur ce qui constitue le **Contenu**, contactez-moi.
+Pour toute réutilisation du **Contenu**, ou en cas de doute sur ce qui constitue le Contenu, veuillez me contacter.
