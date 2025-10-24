@@ -44,7 +44,7 @@ Le **Contenu** (défini ci-dessous) m'appartient avec tous droits réservés © 
 ---
 Le **Contenu** de ce site, y compris, mais sans se limiter à, mon nom, ma photographie, mon information personnelle, les contenus de mes projets et les projets eux-mêmes ne sont **pas** couvert par la GNU General Public License et reste la propriété de leur auteur respectif (généralement moi).
 
-Le **Contenu** comprend, mais ne se limite pas, à l'entièreté du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
+Le **Contenu** comprend, mais ne se limite pas à, l'entièreté du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
 
 ---
 Si vous voulez réutiliser le **Code Source**, vous êtes libre de le faire sous la [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html).
