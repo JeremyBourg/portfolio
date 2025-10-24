@@ -39,10 +39,14 @@ Ce portfolio vient avec une double license:
 
 Le **Code Source** est licensé sous [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-Le **Contenu** (défini ci-dessous) m'appartient avec tous droits réservés © 2025 Jérémy Bourg.
+Le **Contenu** (défini ci-dessous) m'appartient avec tous droits réservés © 2025 Jérémy Bourg
 
+---
 Le **Contenu** de ce site, y compris, mais sans se limiter à, mon nom, ma photographie, mon information personnelle, les contenus de mes projets et les projets eux-mêmes ne sont **pas** couvert par la GNU General Public License et reste la propriété de leur auteur respectif (généralement moi).
+
 Le **Contenu** comprend, mais ne se limite pas, à l'entièreté du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
 
+---
 Si vous voulez réutiliser le **Code Source**, vous êtes libre de le faire sous la [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html).
-Si vous voulez réutiliser du **Contenu**, contactez-moi.
+
+Si vous voulez réutiliser le **Contenu**, ou en cas de doute sur ce qui constitue le **Contenu**, contactez-moi.
