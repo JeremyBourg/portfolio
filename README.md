@@ -40,7 +40,7 @@ Ce portfolio est distribué sous un régime de double licence :
 - Le **Code Source** est sous licence [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
 - Le **Contenu** (défini ci-dessous) demeure ma propriété exclusive, avec tous droits réservés © 2025 Jérémy Bourg.
 
-Le **Contenu** de ce site, y compris, sans s’y limiter, mon nom, ma photographie, mes informations personnelles, les descriptions de projets et les projets eux-mêmes, n’est **pas** couvert par la GNU General Public License et reste la propriété de leur(s) auteur(s) respectif(s) (généralement moi).
+Le **Contenu** de ce site — y compris, mais sans s’y limiter, mon nom, ma photographie, mes informations personnelles, les descriptions de projets et les projets eux-mêmes — n’est **pas** couvert par la GNU General Public License et reste la propriété de leur(s) auteur(s) respectif(s) (généralement moi).
 
 Le **Contenu** comprend notamment, mais sans s’y limiter, l’intégralité du dossier `/src/lib/assets` et le fichier `/src/routes/projets/data.js`.
 
