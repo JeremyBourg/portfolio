@@ -38,6 +38,7 @@ Le vecteur ne m'appartient pas, et son utilisation doit respecter les termes sp�
 Ce portfolio vient avec une double license:
 
 Le **Code Source** est licensé sous [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
 Le **Contenu** (défini ci-dessous) m'appartient avec tous droits réservés © 2025 Jérémy Bourg.
 
 Le **Contenu** de ce site, y compris, mais sans se limiter à, mon nom, ma photographie, mon information personnelle, les contenus de mes projets et les projets eux-mêmes ne sont **pas** couvert par la GNU General Public License et reste la propriété de leur auteur respectif (généralement moi).
