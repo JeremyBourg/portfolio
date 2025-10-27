@@ -30,6 +30,7 @@ let {data} = $props();
                 </div>
                 {#if index % 2 !== 0}
 					{#if isVideo}
+						<!-- TODO: fix controls appearing on webkit mobile -->
 						<div class="img-container" data-speed="0.91">
 							<video src="{thumbnail}" autoplay muted loop></video>
 						</div>

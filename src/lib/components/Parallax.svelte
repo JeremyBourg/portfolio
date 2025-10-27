@@ -20,6 +20,8 @@ const layers = [
 let top = $state();
 </script>
 
+<!-- TODO: put title (programmer) in parallax name -->
+
 <svelte:window bind:scrollY={top} />
 
 <div id="parallax">
@@ -62,7 +64,7 @@ img {
 }
 .parallax-name {
     z-index: -10;
-    top: 16vh;
+    top: 8vh;
 }
 
 #no-parallax {
