@@ -1,12 +1,12 @@
 <script>
-import parallax0 from '$lib/assets/parallax0.webp'
-import parallax1 from '$lib/assets/parallax1.webp'
-import parallax2 from '$lib/assets/parallax2.webp'
-import parallax3 from '$lib/assets/parallax3.webp'
-import parallax4 from '$lib/assets/parallax4.webp'
-import parallax5 from '$lib/assets/parallax5.webp'
-import name from '$lib/assets/parallax-name.webp'
-import parallax_static from '$lib/assets/parallax-static.webp'
+import parallax0 from '$lib/assets/parallax0.webp?enhanced';
+import parallax1 from '$lib/assets/parallax1.webp?enhanced';
+import parallax2 from '$lib/assets/parallax2.webp?enhanced';
+import parallax3 from '$lib/assets/parallax3.webp?enhanced';
+import parallax4 from '$lib/assets/parallax4.webp?enhanced';
+import parallax5 from '$lib/assets/parallax5.webp?enhanced';
+import name from '$lib/assets/parallax-name.webp?enhanced';
+import parallax_static from '$lib/assets/parallax-static.webp?enhanced';
 
 const layers = [
 	parallax0,
@@ -20,24 +20,23 @@ const layers = [
 let top = $state();
 </script>
 
-<!-- TODO: put title (programmer) in parallax name -->
-
 <svelte:window bind:scrollY={top} />
 
 <div id="parallax">
     <div id="fill" style="height: {top/2}px"></div>
 	{#each layers as image, index}
-		<img
+		<enhanced:img
 			src="{image}"
 			alt="parallax layer {index}"
 			style="transform: translate(0, {(-top * (index/2)) / (layers.length - 1)}px); z-index: {-10 + index}"
-		>
+			sizes="(100vw)"
+		/>
 	{/each}
-    <img class="parallax-name" src="{name}" alt="">
+    <enhanced:img class="parallax-name" src="{name}" alt="Jérémy Bourg" sizes="(100vw)" />
 </div>
 
 <div id="no-parallax">
-	<img src="{parallax_static}" alt="">
+	<enhanced:img src="{parallax_static}" alt="" sizes="(100vw)"/>
 </div>
 
 <style>
@@ -56,7 +55,7 @@ let top = $state();
     bottom: 0;
     width: 100%;
 }
-img {
+enhanced\:img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -72,7 +71,7 @@ img {
 	height: 100vh;
 	position: relative;
 
-	img {
+	enhanced\:img {
 		object-fit: cover;
 		object-position: 54%;
 	}
