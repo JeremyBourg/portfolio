@@ -32,6 +32,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Jérémy Bourg</title>
 </svelte:head>
 
 
