@@ -1,5 +1,6 @@
 <script>
 import CTA from "$lib/components/CTA.svelte";
+import cv from "$lib/assets/Curriculum Vitae.pdf";
 
 let name = $state('');
 let email = $state('');
@@ -109,8 +110,7 @@ const reset = () => {
         </div>
         <div>
             <p>CV:</p>
-			<!-- TODO: real cv -->
-            <a href="#" download>Télécharger (PDF)</a>
+            <a href="{cv}" download>Télécharger (PDF)</a>
         </div>
     </div>
 </div>
