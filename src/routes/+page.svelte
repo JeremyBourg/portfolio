@@ -18,9 +18,9 @@ import Term from '$lib/components/Term.svelte';
 			<h2 data-speed="1.05">Programmeur full-stack</h2>
 			<p>Salut! Moi, c’est <span>Jérémy Bourg.</span></p>
 			<br>
-			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en programmation.</p>
+			<p>Je suis finissant en <span>Techniques d’Intégration Multimédia</span>. Je cherche un stage en <span>programmation</span>.</p>
 			<br>
-			<p>Je vise à apprendre des technologies back-end, mais je suis aussi ouvert au front-end.</p>
+			<p>Étant un geek full-stack, je vise à apprendre des technologies front-end et back-end.</p>
 
 			<div style="margin-top: 6.125rem;" data-speed="1.1">
 				<CTA label={"Voir les projets"} href={"/projets"}/>
@@ -43,16 +43,16 @@ import Term from '$lib/components/Term.svelte';
 			<h2 data-speed="1.05">Qualités</h2>
 			<div id="qualities">
 				<div>
-					<h3><span>Résolution de problèmes</span></h3>
-					<p>Mon passe-temps #1</p>
-				</div>
-				<div>
-					<h3><span>Curiosité</span></h3>
+					<h3><span>Volonté d'apprentissage</span></h3>
 					<p>Une grande soif d'apprendre</p>
 				</div>
 				<div>
-					<h3><span>Minutie</span></h3>
-					<p>Souci du détail et des bugs</p>
+					<h3><span>Ténacité</span></h3>
+					<p>Je n'abandonne pas, chaque erreur est une opportunité d'apprendre!</p>
+				</div>
+				<div>
+					<h3><span>Résolution de problèmes</span></h3>
+					<p>Mon passe-temps #1</p>
 				</div>
 			</div>
 		</div>
