@@ -15,6 +15,11 @@ let { data } = $props();
 			<h2>{data.post.subject}</h2>
 			<div id="separator"></div>
 			<h4>{data.post.skills}</h4>
+
+			{#if data.post.credits}
+				<p class="extra">{data.post.credits}</p>
+			{/if}
+
 			<h3>{data.post.type}</h3>
 		</div>
 		{#if data.post.clickable}

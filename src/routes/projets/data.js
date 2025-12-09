@@ -127,6 +127,63 @@ export const posts = [
 	},
 
 	{
+		slug: 'duelliste',
+		title: 'Duelliste',
+		subject: 'Conception de jeu',
+		skills: 'C#, Unity',
+		type: 'Projet scolaire',
+		description: "<p>Duelliste est une installation intéractive réalisée pour \
+		<span>ChaosMédia</span>. C'est un jeu de rythme compétitif où l'idée \
+		est de faire une séquence que l'autre joueur devra répéter.</p> <br>\
+		<p>J'était en charge de la <span>programmation</span> et de <span>l'intégration</span>.</p>",
+		summary: "Un jeu de rythme compétitif programmé en C# réalisé pour l'exposition ChaosMédia.",
+		credits: "Jérémy Bourg, Derek Samson, Dzhulian Farashev, Nathan St-Jean, Samuel Gilbert",
+		thumbnail: portfolioThumbnail,
+
+		sections: [
+			{
+				type: "carousel",
+				title: "Programmation",
+				content: "<p>C'est un jeu relativement complexe avec plusieurs éléments à \
+				orchestrer. Il y a en tout plus de <span>1000</span> lignes de code.</p>",
+				slides: [
+					{
+						image: pf_cmp_cursor,
+						caption: "Logique",
+					},
+					{
+						image: pf_cmp_cursor,
+						caption: "",
+					},
+					{
+						image: pf_cmp_cursor,
+						caption: "",
+					},
+					{
+						image: pf_cmp_cursor,
+						caption: "",
+					},
+				],
+			},
+			{
+				type: "carousel",
+				title: "Intégration",
+				image: portfolioThumbnail,
+				content: "<p>lorem ipsum</p>",
+			},
+			{
+				type: "modal",
+				title: "Apprentissages",
+				image: portfolioThumbnail,
+				content: "<p>lorem ipsum</p>",
+			},
+			{
+
+			},
+		],
+	},
+
+	{
 		slug: 'tek-it',
 		title: 'Tek It',
 		subject: 'Animation typographique',

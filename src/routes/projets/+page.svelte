@@ -125,7 +125,7 @@ img, video {
 	}
 }
 
-.card-left img, .card-right video{
+.card-left img, .card-left video{
     transform: translateX(7%);
 
 	@media screen and (max-width: 768px) {
@@ -143,7 +143,7 @@ img, video {
 .card-left .project-info {
 	margin-left: -10%;
 	padding-right: 20%;
-	
+
 	@media screen and (max-width: 768px) {
 		margin-left: 0%;
 		padding-right: 0%;
